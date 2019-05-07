@@ -913,7 +913,7 @@ def blank_workbook():
     print('Workbook Saved')
 
 
-def ptx_workbook(**kwargs):
+def schema_0_workbook(**kwargs):
     """Creates a workbook full of schema sheets populated from pandas dataframes
 
     Args:
