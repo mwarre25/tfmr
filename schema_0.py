@@ -751,7 +751,7 @@ def blank_tblResultsDetails():
     return tblResultsDetails
 
 
-def blank_ptxResults():
+def blank_schema_0_Results():
     """Creates a blank ptxResults dataframe
     Args:
         none
