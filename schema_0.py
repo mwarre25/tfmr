@@ -1,7 +1,7 @@
 """
-tfmr.ptx_schema
+tfmr.schema_0
 ===============================================================
-tfmr sub-module for creating ptx schema tables
+tfmr sub-module for creating schema _0 tables
 """
 
 import pandas as pd
@@ -849,14 +849,14 @@ def blank_tblComments():
     return tblComments
 
 
-def blank_ptx_workbook():
-    """Creates a workbook full of blank PTX schema sheets
+def blank_workbook():
+    """Creates a workbook full of blank schema sheets
 
     Args:
         none
 
     Returns:
-        Excel workbook: Excel workbook containing PTX schema sheets
+        Excel workbook: Excel workbook containing schema sheets
     """
     qryTfmrs = blank_qryTfmrs(),
     qryDGA = blank_qryDGA(),
@@ -877,7 +877,7 @@ def blank_ptx_workbook():
     tblComments = blank_tblComments()
 
     now = dt.datetime.now().strftime("%Y-%m-%d_%I%M%p").upper()
-    fname = now + "_ptx_workbook.xlsx"
+    fname = now + "_workbook.xlsx"
 
     writer = pd.ExcelWriter(fname, engine="xlsxwriter")
 
@@ -914,7 +914,7 @@ def blank_ptx_workbook():
 
 
 def ptx_workbook(**kwargs):
-    """Creates a workbook full of PTX schema sheets populated from pandas dataframes
+    """Creates a workbook full of schema sheets populated from pandas dataframes
 
     Args:
         qryTfmrs (kwarg) (dataframe): Dataframe with qryTfmrs fields and data
@@ -936,7 +936,7 @@ def ptx_workbook(**kwargs):
         tblComments  (kwarg) (dataframe): Dataframe with tblComments fields and data
 
     Returns:
-        Excel workbook: Excel workbook with only populated PTX schema query sheets
+        Excel workbook: Excel workbook with only populated schema query sheets
     """
 
     now = dt.datetime.now().strftime("%Y-%m-%d_%I%M%p").upper()
