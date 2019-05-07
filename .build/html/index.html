@@ -85,6 +85,8 @@
 <li><a class="reference internal" href="#tfmr-accdb">tfmr.accdb</a></li>
 <li><a class="reference internal" href="#tfmr-plots">tfmr.plots</a></li>
 <li><a class="reference internal" href="#tfmr-schema-0">tfmr.schema_0</a></li>
+<li><a class="reference internal" href="#tfmr-transformations">tfmr.transformations</a></li>
+<li><a class="reference internal" href="#tfmr-validation">tfmr.validation</a></li>
 <li><a class="reference internal" href="#tfmr-schema-1">tfmr.schema_1</a></li>
 </ul>
 </li>
@@ -888,6 +890,314 @@ Also saves the dataframe to png in current working directory.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+</div>
+<span class="target" id="module-tfmr.transformations"></span><div class="section" id="tfmr-transformations">
+<h2>tfmr.transformations<a class="headerlink" href="#tfmr-transformations" title="Permalink to this headline">¶</a></h2>
+<p>tfmr sub-module for transforming tfmr data</p>
+<dl class="function">
+<dt id="tfmr.transformations.application_map">
+<code class="descclassname">tfmr.transformations.</code><code class="descname">application_map</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.transformations.application_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>NOT CURRENTLY IMPLEMENTED:
+Takes as input unique raw data strings representing tfmr application and
+attempts to map them to current application list in tfmr_db</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pass</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">pass</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.transformations.get_stems">
+<code class="descclassname">tfmr.transformations.</code><code class="descname">get_stems</code><span class="sig-paren">(</span><em>df</em>, <em>column</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.transformations.get_stems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input string column, output word stems using pdpipe
+<a class="reference external" href="https://github.com/shaypal5/pdpipe">https://github.com/shaypal5/pdpipe</a></p>
+<p>This function uses pdpipe, an easy to use pandas piping library,
+to in turn use nltk to convert sentances into a list of word stems using
+ntltk functions tokenizer, remove stopwords and english snowball stemmer.</p>
+<ul class="simple">
+<li>TokenizeWords (<a class="reference external" href="https://www.nltk.org/api/nltk.tokenize.html">https://www.nltk.org/api/nltk.tokenize.html</a>),</li>
+<li>RemoveStopWords (<a class="reference external" href="https://stackoverflow.com/questions/5486337/how-to-remove-stop-words-using-nltk-or-python">https://stackoverflow.com/questions/5486337/how-to-remove-stop-words-using-nltk-or-python</a>),</li>
+<li>SnowballStemmer/EnglishStemmer (<a class="reference external" href="http://www.nltk.org/howto/stem.html">http://www.nltk.org/howto/stem.html</a>)}</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>df</strong> (<em>dataframe</em>) – dataframe of column to be stemmed</li>
+<li><strong>column</strong> (<em>dataframe</em>) – column to be stemmed</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Copied dataframe with new columns for each step (tokenize, remove stop words, stemmer)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dataframe</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.transformations.manufacturer_map">
+<code class="descclassname">tfmr.transformations.</code><code class="descname">manufacturer_map</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.transformations.manufacturer_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>NOT CURRENTLY IMPLEMENTED:
+Input manufacturer list; output mapping list
+to use for pandas replace transformation</p>
+<p>Takes as input unique manufacturers and attempts
+to map them to current manufacturer list in tfmr_db</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pass</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">pass</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.transformations.numphases_map">
+<code class="descclassname">tfmr.transformations.</code><code class="descname">numphases_map</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.transformations.numphases_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>NOT CURRENTLY IMPLEMENTED:
+Takes as input unique strings representing number of phases
+and maps to 1, 3 or np.Nan</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pass</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">pass</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.transformations.regex_date_tester">
+<code class="descclassname">tfmr.transformations.</code><code class="descname">regex_date_tester</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.transformations.regex_date_tester" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function takes a string that might be a date and
+tries to match it with different date style regex strings.
+current pattern list: yyyy_mm_dd, yyyymmdd_or_yyyyddmm,
+mmddyyyy_or_ddmmyyyy, yyyy, mm_yyyy, mmMONyy</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.transformations.split_string_to_float">
+<code class="descclassname">tfmr.transformations.</code><code class="descname">split_string_to_float</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.transformations.split_string_to_float" title="Permalink to this definition">¶</a></dt>
+<dd><p>NOT CURRENTLY IMPLEMENTED:
+Takes as input a string with potential HV_kV, LV_kV or TV_kV values and
+returns HV_kV, LV_kV, TV_kV or np.Nan</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pass</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">pass</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.transformations.string_to_bool">
+<code class="descclassname">tfmr.transformations.</code><code class="descname">string_to_bool</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.transformations.string_to_bool" title="Permalink to this definition">¶</a></dt>
+<dd><p>NOT CURRENTLY IMPLEMENTED:
+Takes as input unique raw data strings representing a PTX boolean like
+‘IsAuto’ and attempts to map them to True/False</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pass</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">pass</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.transformations.string_year_to_datetime">
+<code class="descclassname">tfmr.transformations.</code><code class="descname">string_year_to_datetime</code><span class="sig-paren">(</span><em>string_list</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.transformations.string_year_to_datetime" title="Permalink to this definition">¶</a></dt>
+<dd><p>NOT CURRENTLY IMPLEMENTED:
+Takes as input list of year strings, i.e. ‘1950’,
+then appends ‘1/1’ to string and changes string to datetime.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>string_list</strong> (<em>pandas series</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">list of tuples where first value is original string
+and second is the new datetime. If original value is not a year string
+only the original value is passed back.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list of tuples</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.transformations.tfmrtype_map">
+<code class="descclassname">tfmr.transformations.</code><code class="descname">tfmrtype_map</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.transformations.tfmrtype_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>NOT CURRENTLY IMPLEMENTED:
+Takes as input unique raw data strings representing tfmr type and
+attempts to map them to current tfmrtype list in tfmr_db</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pass</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">pass</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<span class="target" id="module-tfmr.validation"></span><div class="section" id="tfmr-validation">
+<h2>tfmr.validation<a class="headerlink" href="#tfmr-validation" title="Permalink to this headline">¶</a></h2>
+<p>tfmr sub-module previously used for validating the software using schema_0 tables</p>
+<dl class="function">
+<dt id="tfmr.validation.dupe_check">
+<code class="descclassname">tfmr.validation.</code><code class="descname">dupe_check</code><span class="sig-paren">(</span><em>tblResults</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.validation.dupe_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function groups a tblResults df by SN and gets the count of SERIALNUM occurrence.</p>
+<p>If an SN count is &gt; 1 it prints that the check has failed.</p>
+<p>It then copies a notnull version of a dga df and the tblResults df. This needs to be changed!</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.validation.duval_cat3_rules">
+<code class="descclassname">tfmr.validation.</code><code class="descname">duval_cat3_rules</code><span class="sig-paren">(</span><em>tblResults</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.validation.duval_cat3_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>this function calculates True or False for each sample using the Duval Category 3 rules</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.validation.duval_prefail_rules">
+<code class="descclassname">tfmr.validation.</code><code class="descname">duval_prefail_rules</code><span class="sig-paren">(</span><em>tblResults</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.validation.duval_prefail_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>this function calculates True or False for each sample using the Duval Prefailure rules</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.validation.failure_check">
+<code class="descclassname">tfmr.validation.</code><code class="descname">failure_check</code><span class="sig-paren">(</span><em>tblResults</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.validation.failure_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function checks for a column ‘F’ in a ptx tblResults df.</p>
+<p>If no ‘F’ in the df it creates one by looping through the df looking
+for the string ‘_F’ in the ‘SERIALNUM’ column.</p>
+<p>If there is an ‘_F’, a 1 is appended to a list, else a 0.
+This list is then appended to the tblResults df.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.validation.gas_check">
+<code class="descclassname">tfmr.validation.</code><code class="descname">gas_check</code><span class="sig-paren">(</span><em>dga</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.validation.gas_check" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>This function checks for set [‘H2’, ‘CH4’, ‘C2H6’, ‘C2H4’, ‘C2H2’, ‘CO’, ‘CO2’,</dt>
+<dd>‘O2’, ‘N2’] in a dga df.</dd>
+</dl>
+<p>If any gas not present a failure text is printed.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.validation.get_last_samples">
+<code class="descclassname">tfmr.validation.</code><code class="descname">get_last_samples</code><span class="sig-paren">(</span><em>df</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.validation.get_last_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns a df of last samples from input of a
+df with ‘SERIALNUM’
+and ‘SAMPLEDATE’ fields</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.validation.get_ratios_medians">
+<code class="descclassname">tfmr.validation.</code><code class="descname">get_ratios_medians</code><span class="sig-paren">(</span><em>dga</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.validation.get_ratios_medians" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>This function takes a dga dataframe and computes two columns:</dt>
+<dd><ul class="first last simple">
+<li>N2_O2_RATIO</li>
+<li>C2H6_CH4_RATIO</li>
+<li>C2H4_C2H2_RATIO</li>
+<li>CO2_CO_RATIO</li>
+<li>O2_N2_RATIO</li>
+<li>N2_O2_MEDIAN</li>
+<li>C2H6_CH4_MEDIAN</li>
+<li>C2H4_C2H2_MEDIAN</li>
+<li>CO2_CO_MEDIAN</li>
+<li>O2_N2_MEDIAN</li>
+</ul>
+</dd>
+</dl>
+<p>If there are NaN values present in the N2_O2_RATIO column they are filled with 1’s.</p>
+<p>The median of these ratios is calculated for each serial number be grouping the column by SN and using transform</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.validation.iec60599_high_rules">
+<code class="descclassname">tfmr.validation.</code><code class="descname">iec60599_high_rules</code><span class="sig-paren">(</span><em>tblResults</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.validation.iec60599_high_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>this function calculates True or False for each sample using the IEC60599 high rules</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.validation.iec60599_low_rules">
+<code class="descclassname">tfmr.validation.</code><code class="descname">iec60599_low_rules</code><span class="sig-paren">(</span><em>tblResults</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.validation.iec60599_low_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>this function calculates True or False for each sample using the IEC60599 low rules</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.validation.ieee_rules">
+<code class="descclassname">tfmr.validation.</code><code class="descname">ieee_rules</code><span class="sig-paren">(</span><em>tblResults</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.validation.ieee_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>this function calculates 1, 2, 3, or 4 for each sample based on IEEE OLD rules</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.validation.nei_rules">
+<code class="descclassname">tfmr.validation.</code><code class="descname">nei_rules</code><span class="sig-paren">(</span><em>tblResults</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.validation.nei_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>this function calculates NEI, NEI Score, NEI Alt Score, CH4 Score,
+C2H6 Score, C2H4 Score, C2H2 Score and HC Score for each sample using
+the NEI rules</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.validation.ninetieth_pct_rules">
+<code class="descclassname">tfmr.validation.</code><code class="descname">ninetieth_pct_rules</code><span class="sig-paren">(</span><em>tblResults</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.validation.ninetieth_pct_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>this function calculates True or False for each sample using the 90th pct rules</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.validation.ptx_check">
+<code class="descclassname">tfmr.validation.</code><code class="descname">ptx_check</code><span class="sig-paren">(</span><em>tblResults</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.validation.ptx_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function checks for set [‘ABNORMALTHERMAL’, ‘ABNORMALELECTRICAL’,
+‘ABNORMALCORE’] in a dga df.</p>
+<p>If any gas not present a failure text is printed.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.validation.ptx_rules">
+<code class="descclassname">tfmr.validation.</code><code class="descname">ptx_rules</code><span class="sig-paren">(</span><em>tblResults</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.validation.ptx_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>this function calculates True and False for each sample based on PTX rules past and present</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.validation.rand_forest">
+<code class="descclassname">tfmr.validation.</code><code class="descname">rand_forest</code><span class="sig-paren">(</span><em>train_data</em>, <em>test_data</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.validation.rand_forest" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li>this function takes a training and a test set where the sets are gases and failure flag (currently; needs to be more general for new ideas (trends etc))</li>
+<li>it makes the classifier, runs the fit, generates predictions, and a confisuon matrix to get the tp, fp, tn, fn values. Outputs these as a table</li>
+</ul>
 </dd></dl>
 
 </div>

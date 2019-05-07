@@ -152,18 +152,10 @@ def get_stems(df, column):
     return new_df
 
 def regex_date_tester(string):
-    '''
-    This function takes a string that might be a date and 
+    '''This function takes a string that might be a date and 
     tries to match it with different date style regex strings.
-    current pattern list:
-     - yyyy_mm_dd
-     - yyyymmdd_or_yyyyddmm
-     - mmddyyyy_or_ddmmyyyy
-     - yyyy
-     - mm_yyyy
-     - mmMONyy
-     - 
-     - 
+    current pattern list: yyyy_mm_dd, yyyymmdd_or_yyyyddmm,
+    mmddyyyy_or_ddmmyyyy, yyyy, mm_yyyy, mmMONyy
     '''
     yyyy_mm_dd_pattern = (
         '^(19|20)\d\d[- /.](0[1-9]|1[0-2])[- /.](0[1-9]|[12][0-9]|3[01])$',
