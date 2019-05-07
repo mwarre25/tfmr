@@ -1,5 +1,4 @@
 import unittest
-import tfmr.schema_0
 import pandas as pd
 
 class TestSchema0(unittest.TestCase):
@@ -15,4 +14,4 @@ class TestSchema0(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    print(dir(tfmr))
+    unittest.main()
