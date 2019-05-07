@@ -13,7 +13,7 @@ The purpose of this module is to provide a wrangler of transformer data function
 .. automodule:: tfmr.plots
     :members:
 
-.. automodule:: tfmr.ptx_schema
+.. automodule:: tfmr.schema_0
     :members:
 
 .. automodule:: tfmr.transformations
@@ -22,13 +22,7 @@ The purpose of this module is to provide a wrangler of transformer data function
 .. automodule:: tfmr.validation
     :members:
 
-.. automodule:: tfmr.xfmr_db_schema
-    :members:
-
-.. automodule:: tfmr.nltk_pipes
-    :members:
-
-.. automodule:: tfmr.regex
+.. automodule:: tfmr.schema_1
     :members:
 
 .. toctree::

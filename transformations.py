@@ -1,3 +1,8 @@
+"""
+tfmr.transformations
+===============================================================
+tfmr sub-module for transforming tfmr data
+"""
 import pandas as import pd
 import re
 import pdpipe as pdp

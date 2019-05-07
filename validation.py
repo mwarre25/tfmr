@@ -1,3 +1,8 @@
+"""
+tfmr.validation
+===============================================================
+tfmr sub-module previously used for validating the software using schema_0 tables
+"""
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.datasets import make_classification
