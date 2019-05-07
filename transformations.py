@@ -1,5 +1,5 @@
 import pandas as import pd
-import tfmr.lists as ptx_lists
+import tfmr.lists as lists
 
 
 def application_map():

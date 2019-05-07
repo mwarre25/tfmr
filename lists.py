@@ -1,11 +1,11 @@
 """
 tfmr.lists
 ===============================================================
-tfmr sub-module for storing common PTX schema and tfmr_db lists
+tfmr sub-module for storing common schema_0 and schema_1 lists
 """
 
 def qryTfmrsManufacturerList():
-    '''Returns current PTX schema manufacturer list.
+    '''Returns current schema_0 manufacturer list.
 
     Returns:
         List of strings
@@ -30,7 +30,7 @@ def qryTfmrsManufacturerList():
 
 
 def qryTfmrsCoreTypeList():
-    '''Returns the current PTX schema core type list.
+    '''Returns the current schema_0 core type list.
 
     Returns:
         List of strings
@@ -40,7 +40,7 @@ def qryTfmrsCoreTypeList():
 
 
 def qryLTCsManufacturerList():
-    '''Returns the current PTX schema LTC manufacturer list.
+    '''Returns the current schema_0 LTC manufacturer list.
 
     Returns:
         List of strings
@@ -57,7 +57,7 @@ def qryLTCsManufacturerList():
 
 
 def qryLTCsModelList():
-    '''Returns the current PTX schema LTC model list.
+    '''Returns the current schema_0 LTC model list.
 
     Returns:
         List of strings
@@ -99,7 +99,7 @@ def qryLTCsModelList():
 
 
 def qryLTCBreatherList():
-    '''Returns the current PTX schema LTC breather list.
+    '''Returns the current schema_0 LTC breather list.
 
     Returns:
         List of strings
