@@ -113,7 +113,7 @@ def read_accdb_tbl(tbl_selection, **kwargs):
     return data
 
 
-def write_to_ptx_accdb_tbls(**kwargs):
+def write_to_schema_0_accdb_tbls(**kwargs):
     '''BROKEN! Writes pandas dataframes to an Access db
 
     Note: All datetime fields broken, pyodbc module error.
