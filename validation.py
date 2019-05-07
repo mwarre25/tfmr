@@ -771,5 +771,7 @@ def get_last_samples(df):
         df_last_samples = df.groupby('SERIALNUM').agg(
             lambda x: x.loc[x.SAMPLEDATE.idxmax()])
         df_last_samples = df_last_samples.reset_index()
+    except Exception as e:
+        print(str(e))
 
     return df_last_samples
