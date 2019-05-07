@@ -1,0 +1,1165 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>tfmr module documentation &mdash; tfmr  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> tfmr
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">tfmr module documentation</a><ul>
+<li><a class="reference internal" href="#tfmr-lists">tfmr.lists</a></li>
+<li><a class="reference internal" href="#tfmr-accdb">tfmr.accdb</a></li>
+<li><a class="reference internal" href="#tfmr-plots">tfmr.plots</a></li>
+<li><a class="reference internal" href="#tfmr-ptx-schema">tfmr.ptx_schema</a></li>
+<li><a class="reference internal" href="#tfmr-xfmr-db-schema">tfmr.xfmr_db_schema</a></li>
+<li><a class="reference internal" href="#tfmr-nltk-pipes">tfmr.nltk_pipes</a></li>
+<li><a class="reference internal" href="#tfmr-regex">tfmr.regex</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">tfmr</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>tfmr module documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tfmr-module-documentation">
+<h1>tfmr module documentation<a class="headerlink" href="#tfmr-module-documentation" title="Permalink to this headline">¶</a></h1>
+<p>The purpose of this module is to provide a wrangler of transformer data functions to extract, transform and load.</p>
+<span class="target" id="module-tfmr.lists"></span><div class="section" id="tfmr-lists">
+<h2>tfmr.lists<a class="headerlink" href="#tfmr-lists" title="Permalink to this headline">¶</a></h2>
+<p>tfmr sub-module for storing common PTX schema and tfmr_db lists</p>
+<dl class="function">
+<dt id="tfmr.lists.qryLTCBreatherList">
+<code class="descclassname">tfmr.lists.</code><code class="descname">qryLTCBreatherList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.lists.qryLTCBreatherList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current PTX schema LTC breather list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of strings</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.lists.qryLTCsManufacturerList">
+<code class="descclassname">tfmr.lists.</code><code class="descname">qryLTCsManufacturerList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.lists.qryLTCsManufacturerList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current PTX schema LTC manufacturer list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of strings</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.lists.qryLTCsModelList">
+<code class="descclassname">tfmr.lists.</code><code class="descname">qryLTCsModelList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.lists.qryLTCsModelList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current PTX schema LTC model list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of strings</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.lists.qryTfmrsCoreTypeList">
+<code class="descclassname">tfmr.lists.</code><code class="descname">qryTfmrsCoreTypeList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.lists.qryTfmrsCoreTypeList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current PTX schema core type list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of strings</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.lists.qryTfmrsManufacturerList">
+<code class="descclassname">tfmr.lists.</code><code class="descname">qryTfmrsManufacturerList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.lists.qryTfmrsManufacturerList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns current PTX schema manufacturer list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of strings</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<span class="target" id="module-tfmr.accdb"></span><div class="section" id="tfmr-accdb">
+<h2>tfmr.accdb<a class="headerlink" href="#tfmr-accdb" title="Permalink to this headline">¶</a></h2>
+<p>tfmr sub-module for import to/export from accdb files.</p>
+<p>The main assumption here is that we’re working with PTX schema Access databases
+so some of the code may not have been abstracted enough to accomodate all Access
+databases.</p>
+<p>The module write_to_ptx_accdb_tbls is currently broken because of a pyodbc issue:</p>
+<p>The ODBC module used is pyodbc: <a class="reference external" href="https://github.com/mkleehammer/pyodbc">https://github.com/mkleehammer/pyodbc</a>.
+The GUI module used is PySimpleGUI: <a class="reference external" href="https://github.com/PySimpleGUI/PySimpleGUI">https://github.com/PySimpleGUI/PySimpleGUI</a></p>
+<dl class="function">
+<dt id="tfmr.accdb.create_ptx_accdb">
+<code class="descclassname">tfmr.accdb.</code><code class="descname">create_ptx_accdb</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.accdb.create_ptx_accdb" title="Permalink to this definition">¶</a></dt>
+<dd><p>BROKEN! Error with win32client
+Creates an Access db</p>
+<p>This function creates a blank Access database with the latest PTX schema.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>filename</strong> (<em>kwarg</em><em>) </em><em>(</em><em>string</em>) – Access db filename</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.accdb.get_accdb_tbl_list">
+<code class="descclassname">tfmr.accdb.</code><code class="descname">get_accdb_tbl_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.accdb.get_accdb_tbl_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of accdb tables for single db</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">List of strings of each table in the database.
+If exception prints to console.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.accdb.read_accdb_tbl">
+<code class="descclassname">tfmr.accdb.</code><code class="descname">read_accdb_tbl</code><span class="sig-paren">(</span><em>tbl_selection</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.accdb.read_accdb_tbl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a table from an accdb</p>
+<p>This function loads a table from an access db.
+The only implemented <a href="#id1"><span class="problematic" id="id2">**</span></a>kwarg checked for right now is filename.
+Add the filename to bypass the popup prompt.</p>
+<p>If exception, string prints to console.
+The function then tries to pull the selected
+file’s table list. It then prompts you to enter a table name.
+If this fails it will fail again in a less pretty way.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tbl_selection</strong> (<em>string</em>) – Name of table to read.</li>
+<li><strong>filename</strong> (<em>kwarg</em>) – relative or absolute path of accdb filename of table.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Selected table in dataframe.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">data (dataframe)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.accdb.write_to_ptx_accdb_tbls">
+<code class="descclassname">tfmr.accdb.</code><code class="descname">write_to_ptx_accdb_tbls</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.accdb.write_to_ptx_accdb_tbls" title="Permalink to this definition">¶</a></dt>
+<dd><p>BROKEN! Writes pandas dataframes to an Access db</p>
+<p>Note: All datetime fields broken, pyodbc module error.</p>
+<p>This function attempts to load pandas dataframes into an Access accdb file
+if it sees the dataframe.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> (<em>kwarg</em><em>) </em><em>(</em><em>string</em>) – Access db filename</li>
+<li><strong>qryBushingPowerFactor</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with qryBushingPowerFactor schema.</li>
+<li><strong>qryDGA</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with qryDGA schema.</li>
+<li><strong>qryFurans</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with qryFurans schema.</li>
+<li><strong>qryInsulationPF</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with qryInsulationPF schema.</li>
+<li><strong>qryLTC</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with qryLTC schema.</li>
+<li><strong>qryLTCDGA</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with qryLTCDGA schema.</li>
+<li><strong>qryLTCOilQuality</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with qryLTCOilQuality schema.</li>
+<li><strong>qryLTCTapCount</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with qryLTCTapCount schema.</li>
+<li><strong>qryLTCTapPosition</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with qryLTCTapPosition schema.</li>
+<li><strong>qryOilQuality</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with qryOilQuality schema.</li>
+<li><strong>qryTfmrs</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with qryTfmrs schema.</li>
+<li><strong>tblComments</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with tblComments schema.</li>
+<li><strong>tblOptions</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with tblOptions schema.</li>
+<li><strong>tblResultDetails</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with tblResultDetails schema.</li>
+<li><strong>tblResults</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with tblResults schema.</li>
+<li><strong>tblResultsOverTime</strong> (<em>kwarg</em><em>) </em><em>(</em><em>pandas dataframe</em>) – pandas dataframe with tblResultsOverTime schema.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<span class="target" id="module-tfmr.plots"></span><div class="section" id="tfmr-plots">
+<h2>tfmr.plots<a class="headerlink" href="#tfmr-plots" title="Permalink to this headline">¶</a></h2>
+<p>tfmr sub-module for storing tfmr data plotting functions.</p>
+<dl class="function">
+<dt id="tfmr.plots.furans_dp_plot">
+<code class="descclassname">tfmr.plots.</code><code class="descname">furans_dp_plot</code><span class="sig-paren">(</span><em>f</em>, <em>dp_table</em>, <em>merge_left_on='SERIALNUM'</em>, <em>merge_right_on='SERIALNUM'</em>, <em>f_size=16</em>, <em>fig_size=(20</em>, <em>12)</em>, <em>plt_col='r'</em>, <em>plt_title_anno='Testing'</em>, <em>pnt_labs=0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.plots.furans_dp_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays Furans v. DP plot and returns dataframe</p>
+<p>This function takes as input a dataframe containing Furans (2-FAL), another dataframe
+containing DP, aggregates the DP values into min, mean, and max, then joins
+the NDI and DP table to plot it.</p>
+<p>Most of the arguments are for plot customization.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>f</strong> (<em>dataframe</em>) – Dataframe containing at least a serial number and 2FAL field</li>
+<li><strong>dp_table</strong> (<em>dataframe</em>) – Dataframe containing at least a serial number and DP field</li>
+<li><strong>merge_left_on</strong> (<em>string</em>) – Field from left dataframe to join the right dataframe</li>
+<li><strong>merge_right_on</strong> (<em>string</em>) – Field from right dataframe to join the left dataframe</li>
+<li><strong>plot_dp_type</strong> (<em>string</em>) – String acting as case for which type of DP aggregate value to use (‘min’, ‘mean’, or ‘max’ currently)</li>
+<li><strong>f_size</strong> (<em>int</em>) – font size integer for matplotlib</li>
+<li><strong>fig_size</strong> (<em>2-tuple of ints</em>) – figure size tuple for matplotlib ((width, height) in inches)</li>
+<li><strong>plt_col</strong> (<em>string</em>) – see <a class="reference external" href="https://matplotlib.org/api/colors_api.html">https://matplotlib.org/api/colors_api.html</a></li>
+<li><strong>plt_title_anno</strong> (<em>string</em>) – Add custom plot title</li>
+<li><strong>pnt_labs</strong> (<em>int</em>) – This acts as a bool (T/F) to determine if you want to add labels to the markers of the plot</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A plot is displayed (might have to adjust how it’s displayed for Jupyter notebooks but try it first).
+Also returns the dataframe used for the plot.
+Also saves the dataframe as png in current working directory.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.plots.ndi_2fal_plot">
+<code class="descclassname">tfmr.plots.</code><code class="descname">ndi_2fal_plot</code><span class="sig-paren">(</span><em>ndi</em>, <em>f</em>, <em>merge_left_on='SERIALNUM'</em>, <em>merge_right_on='SERIALNUM'</em>, <em>plot_2fal_type='max'</em>, <em>f_size=16</em>, <em>fig_size=(20</em>, <em>12)</em>, <em>plt_col='r'</em>, <em>plt_title_anno='Testing'</em>, <em>pnt_labs=0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.plots.ndi_2fal_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays NDI v. Furans plot and returns dataframe</p>
+<p>This function takes as input a dataframe containing NDI, another dataframe
+containing Furans (2-FAL), aggregates the Furans (2-FAL) values into min, mean, median, and max, then joins
+the NDI and Furans (2-FAL) table to plot it.</p>
+<p>Most of the arguments are for plot customization.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ndi</strong> (<em>dataframe</em>) – Dataframe containing at least a serial number and NDI field</li>
+<li><strong>f</strong> (<em>dataframe</em>) – Dataframe containing at least a serial number and f field</li>
+<li><strong>merge_left_on</strong> (<em>string</em>) – Field from left dataframe to join the right dataframe</li>
+<li><strong>merge_right_on</strong> (<em>string</em>) – Field from right dataframe to join the left dataframe</li>
+<li><strong>plot_2fal_type</strong> (<em>string</em>) – String acting as case for which type of 2fal aggregate value to use (‘min’, ‘mean’, or ‘max’ currently)</li>
+<li><strong>f_size</strong> (<em>int</em>) – font size integer for matplotlib</li>
+<li><strong>fig_size</strong> (<em>2-tuple of ints</em>) – figure size tuple for matplotlib ((width, height) in inches)</li>
+<li><strong>plt_col</strong> (<em>string</em>) – see <a class="reference external" href="https://matplotlib.org/api/colors_api.html">https://matplotlib.org/api/colors_api.html</a></li>
+<li><strong>plt_title_anno</strong> (<em>string</em>) – Add custom plot title</li>
+<li><strong>pnt_labs</strong> (<em>int</em>) – This acts as a bool (T/F) to determine if you want to add labels to the markers of the plot</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A plot is displayed (might have to adjust how it’s displayed for Jupyter notebooks but try it first).
+Also returns the dataframe used for the plot.
+Also saves the dataframe to png in current working directory.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.plots.ndi_dp_plot">
+<code class="descclassname">tfmr.plots.</code><code class="descname">ndi_dp_plot</code><span class="sig-paren">(</span><em>ndi</em>, <em>dp_table</em>, <em>merge_left_on='SERIALNUM'</em>, <em>merge_right_on='Serial Number'</em>, <em>plot_dp_type='min'</em>, <em>f_size=16</em>, <em>fig_size=(20</em>, <em>12)</em>, <em>plt_col='green'</em>, <em>plt_title_anno='Testing'</em>, <em>plt_xlab_anno='Normal Degradation'</em>, <em>plt_ylab_anno='Degree of Polymerization (min)'</em>, <em>pnt_labs=0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.plots.ndi_dp_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays NDI v. DP plot and returns dataframe</p>
+<p>This function takes as input a dataframe containing NDI, another dataframe
+containing DP, aggregates the DP values into min, mean, and max, then joins
+the NDI and DP table to plot it.</p>
+<p>Most of the arguments are for plot customization.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ndi</strong> (<em>dataframe</em>) – Dataframe containing at least a serial number and NDI</li>
+<li><strong>dp_table</strong> (<em>dataframe</em>) – Dataframe containing at least a serial number and DP field</li>
+<li><strong>merge_left_on</strong> (<em>string</em>) – Field from left dataframe to join the right dataframe</li>
+<li><strong>merge_right_on</strong> (<em>string</em>) – Field from right dataframe to join the left dataframe</li>
+<li><strong>plot_dp_type</strong> (<em>string</em>) – String acting as case for which type of DP aggregate value to use (‘min’, ‘mean’, or ‘max’ currently)</li>
+<li><strong>f_size</strong> (<em>int</em>) – font size integer for matplotlib</li>
+<li><strong>fig_size</strong> (<em>2-tuple of ints</em>) – figure size tuple for matplotlib ((width, height) in inches)</li>
+<li><strong>plt_col</strong> (<em>string</em>) – see <a class="reference external" href="https://matplotlib.org/api/colors_api.html">https://matplotlib.org/api/colors_api.html</a></li>
+<li><strong>plt_title_anno</strong> (<em>string</em>) – Add custom plot title</li>
+<li><strong>plt_xlab_anno</strong> (<em>string</em>) – Add custom x-label</li>
+<li><strong>plt_ylab_anno</strong> (<em>string</em>) – Add custom y-label</li>
+<li><strong>pnt_labs</strong> (<em>int</em>) – This acts as a bool (T/F) to determine if you want to add labels to the markers of the plot</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A plot is displayed (might have to adjust how it’s displayed for Jupyter notebooks but try it first).
+Also returns the dataframe used for the plot.
+Also saves the dataframe to png in current working directory.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<span class="target" id="module-tfmr.ptx_schema"></span><div class="section" id="tfmr-ptx-schema">
+<h2>tfmr.ptx_schema<a class="headerlink" href="#tfmr-ptx-schema" title="Permalink to this headline">¶</a></h2>
+<p>tfmr sub-module for creating ptx schema tables</p>
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_ptxResults">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_ptxResults</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_ptxResults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank ptxResults dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with ptxResults schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_ptx_workbook">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_ptx_workbook</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_ptx_workbook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a workbook full of blank PTX schema sheets</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>none</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Excel workbook containing PTX schema sheets</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Excel workbook</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qryBushing">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qryBushing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qryBushing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qryBushing dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qryBushing schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qryBushingPowerFactor">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qryBushingPowerFactor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qryBushingPowerFactor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qryBushingPowerFactor dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qryBushingPowerFactor schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qryDGA">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qryDGA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qryDGA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qryDGA dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qryDGA schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qryDiverterDGA">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qryDiverterDGA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qryDiverterDGA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qryDiverterDGA dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qryDiverterDGA schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qryDiverterOilQuality">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qryDiverterOilQuality</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qryDiverterOilQuality" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qryDiverterOilQuality dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qryDiverterOilQuality schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qryFurans">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qryFurans</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qryFurans" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qryFurans dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qryFurans schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qryInsulationPF">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qryInsulationPF</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qryInsulationPF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qryInsulatorPF dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qryInsulatorPF schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qryLTC">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qryLTC</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qryLTC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qryLTC dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qryLTC schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qryLTCDGA">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qryLTCDGA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qryLTCDGA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qryLTCDGA dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qryLTCDGA schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qryLTCOilQuality">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qryLTCOilQuality</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qryLTCOilQuality" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qryLTCOilQuality dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qryLTCOilQuality schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qryLTCTapCount">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qryLTCTapCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qryLTCTapCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qryLTCTapCount dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qryLTCTapCount schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qryLTCTapPosition">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qryLTCTapPosition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qryLTCTapPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qryLTCTapPosition dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qryLTCTapPosition schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qryOilQuality">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qryOilQuality</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qryOilQuality" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qryOilQuality dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qryOilQuality schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qrySelectorDGA">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qrySelectorDGA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qrySelectorDGA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qrySelectorDGA dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qrySelectorDGA schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qrySelectorOilQuality">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qrySelectorOilQuality</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qrySelectorOilQuality" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qrySelectorOilQuality dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qrySelectorOilQuality schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_qryTfmrs">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_qryTfmrs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_qryTfmrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank qryTfmrs dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with qryTfmrs schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_tblComments">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_tblComments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_tblComments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank tblComments dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with tblComments schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_tblResults">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_tblResults</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_tblResults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank tblResults dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with tblResults schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_tblResultsDetails">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_tblResultsDetails</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_tblResultsDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank tblResultsDetails dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with tblResultsDetails schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.blank_tblResultsOverTime">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">blank_tblResultsOverTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.blank_tblResultsOverTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a blank tblResultsOverTime dataframe
+:param none:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dataframe with tblResultsOverTime schema</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dataframe</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.ptx_workbook">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">ptx_workbook</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.ptx_workbook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a workbook full of PTX schema sheets populated from pandas dataframes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>qryTfmrs</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qryTfmrs fields and data</li>
+<li><strong>qryDGA</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qryDGA fields and data</li>
+<li><strong>qryOilQuality</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qryOilQuality fields and data</li>
+<li><strong>qryFurans</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qryFurans fields and data</li>
+<li><strong>qryLTC</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qryLTC fields and data</li>
+<li><strong>qryLTCDGA</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qryLTCDGA fields and data</li>
+<li><strong>qryLTCOilQuality</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qryLTCOilQuality fields and data</li>
+<li><strong>qryLTCTapCount</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qryLTCTapCount fields and data</li>
+<li><strong>qryLTCTapPosition</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qryLTCTapPosition fields and data</li>
+<li><strong>qryInsulationPF</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qryInsulationPF fields and data</li>
+<li><strong>qrySelectorDGA</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qrySelectorDGA fields and data</li>
+<li><strong>qrySelectorOilQuality</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qrySelectorOilQuality fields and data</li>
+<li><strong>qryDiverterDGA</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qryDiverterDGA fields and data</li>
+<li><strong>qryDiverterOilQuality</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qryDiverterOilQuality fields and data</li>
+<li><strong>qryBushing</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qryBushing fields and data</li>
+<li><strong>qryBushingPowerFactor</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with qryBushingPowerFactor fields and data</li>
+<li><strong>tblComments</strong> (<em>kwarg</em><em>) </em><em>(</em><em>dataframe</em>) – Dataframe with tblComments fields and data</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Excel workbook with only populated PTX schema query sheets</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Excel workbook</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.ptx_schema.tblResultsCompare">
+<code class="descclassname">tfmr.ptx_schema.</code><code class="descname">tblResultsCompare</code><span class="sig-paren">(</span><em>tblResults_old</em>, <em>tblResults_new</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.ptx_schema.tblResultsCompare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compares two tblResults tables and outputs a table with the serial numbers that show a change.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>tblResults_old</strong> (<em>dataframe</em>) – Old tblResults to be compared</li>
+<li><strong>tblResults_new</strong> (<em>dataframe</em>) – New tblREsults to be compared</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Workbook with sheets [“abs_chg_gt_0”, “tblResults_old”, “tblResults_new”] saves to current working directory</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Excel workbook</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<span class="target" id="module-tfmr.xfmr_db_schema"></span><div class="section" id="tfmr-xfmr-db-schema">
+<h2>tfmr.xfmr_db_schema<a class="headerlink" href="#tfmr-xfmr-db-schema" title="Permalink to this headline">¶</a></h2>
+<p>tfmr sub-module for creating xfmr_db schema tables</p>
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.data_file_details">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">data_file_details</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.data_file_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes data_file_details dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_application">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_application</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_application" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_application dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_bush_details">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_bush_details</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_bush_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_bush_details dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_bush_manuf">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_bush_manuf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_bush_manuf" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw and final bush_manuf dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_bush_models">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_bush_models</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_bush_models" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_bush_models dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_bush_pf">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_bush_pf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_bush_pf" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_bush_pf dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_bush_service_history">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_bush_service_history</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_bush_service_history" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_bush_service_history dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_ltc_details">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_ltc_details</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_ltc_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_ltc_details dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_ltc_dga">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_ltc_dga</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_ltc_dga" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_ltc_dga dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_ltc_manuf">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_ltc_manuf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_ltc_manuf" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_ltc_manuf dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_ltc_models">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_ltc_models</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_ltc_models" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_ltc_models dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_ltc_oq">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_ltc_oq</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_ltc_oq" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_ltc_oq dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_ltc_service_history">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_ltc_service_history</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_ltc_service_history" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_ltc_service_history dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_ltc_tap_count">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_ltc_tap_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_ltc_tap_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_ltc_tap_count dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_ltc_tap_pos">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_ltc_tap_pos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_ltc_tap_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_ltc_tap_pos dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_tfmr_details">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_tfmr_details</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_tfmr_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw and final tfmr_details dataframes</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_tfmr_dga">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_tfmr_dga</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_tfmr_dga" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_tfmr_dga dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_tfmr_dga_online">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_tfmr_dga_online</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_tfmr_dga_online" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_tfmr_dga_online dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_tfmr_f">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_tfmr_f</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_tfmr_f" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_tfmr_f dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_tfmr_manuf">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_tfmr_manuf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_tfmr_manuf" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_tfmr_manuf dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_tfmr_oq">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_tfmr_oq</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_tfmr_oq" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_tfmr_oq dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_tfmr_service_history">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_tfmr_service_history</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_tfmr_service_history" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_tfmr_service_history dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_tfmr_type">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_tfmr_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_tfmr_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_tfmr_type dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.raw_utilities">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">raw_utilities</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.raw_utilities" title="Permalink to this definition">¶</a></dt>
+<dd><p>initializes raw_utilities dataframe</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tfmr.xfmr_db_schema.xfmr_db_workbook">
+<code class="descclassname">tfmr.xfmr_db_schema.</code><code class="descname">xfmr_db_workbook</code><span class="sig-paren">(</span><em>tfmr_details=Empty DataFrame Columns: [TfmrIdentifier</em>, <em>TfmrSerialNum</em>, <em>TfmrManufacturer</em>, <em>ManufactureDate</em>, <em>IdentifierUnknown</em>, <em>Utility</em>, <em>OperatingCompany</em>, <em>Region</em>, <em>Substation</em>, <em>Designation</em>, <em>CoreType</em>, <em>CoolingType1</em>, <em>MVA1</em>, <em>CoolingType2</em>, <em>MVA2</em>, <em>CoolingType3</em>, <em>MVA3</em>, <em>Application</em>, <em>TfmrType</em>, <em>HV_kV</em>, <em>LV1_kV</em>, <em>LV2_kV</em>, <em>TV_kV</em>, <em>HV_Connection</em>, <em>LV1_Connection</em>, <em>LV2_Connection</em>, <em>TV_Connection</em>, <em>BuriedTertiary</em>, <em>NumPhases</em>, <em>IsAuto</em>, <em>OilType</em>, <em>OilPreservationType</em>, <em>UtilityCriticality</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>tfmr_service_history=Empty DataFrame Columns: [TfmrIdentifier</em>, <em>TfmrEventType</em>, <em>EventDate</em>, <em>PreviousStatus</em>, <em>ServiceStatus</em>, <em>FirstFailure</em>, <em>AgeAtFailure</em>, <em>FailureLoc</em>, <em>FailedComponent</em>, <em>FailureConsequence</em>, <em>FailureCause</em>, <em>RepairBy</em>, <em>RepairLoc</em>, <em>RootCause</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>tfmr_dga=Empty DataFrame Columns: [TfmrIdentifier</em>, <em>SampleFrom</em>, <em>SampleDate</em>, <em>LabTestDate</em>, <em>OilTempC</em>, <em>H2</em>, <em>CH4</em>, <em>C2H6</em>, <em>C2H4</em>, <em>C2H2</em>, <em>CO</em>, <em>CO2</em>, <em>O2</em>, <em>N2</em>, <em>BadSample</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>tfmr_dga_online=Empty DataFrame Columns: [TfmrIdentifier</em>, <em>SampleDate</em>, <em>LabTestDate</em>, <em>OilTempC</em>, <em>H2</em>, <em>CH4</em>, <em>C2H6</em>, <em>C2H4</em>, <em>C2H2</em>, <em>CO</em>, <em>CO2</em>, <em>O2</em>, <em>N2</em>, <em>Moisture_PPM</em>, <em>RelSaturation</em>, <em>MonitorModel</em>, <em>BadSample</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>tfmr_oq=Empty DataFrame Columns: [TfmrIdentifier</em>, <em>SampleDate</em>, <em>LabTestDate</em>, <em>OilTempC</em>, <em>MoisturePPM</em>, <em>Acidity</em>, <em>IFT</em>, <em>Color</em>, <em>D877</em>, <em>D1816_1MM</em>, <em>D1816_2MM</em>, <em>IEC156</em>, <em>PF_25C</em>, <em>PF_100C</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>tfmr_f=Empty DataFrame Columns: [TfmrIdentifier</em>, <em>SampleDate</em>, <em>LabTestDate</em>, <em>2FAL</em>, <em>5M2F</em>, <em>5H2F</em>, <em>2ACF</em>, <em>2FOL</em>, <em>CH3OH</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>tfmr_type=Empty DataFrame Columns: [TfmrType</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>utilities=Empty DataFrame Columns: [Fullname</em>, <em>Region</em>, <em>Headquarters</em>, <em>PointofContact1</em>, <em>PhoneofContact1</em>, <em>PointofContact2</em>, <em>PhoneofContact2</em>, <em>DataFileName</em>, <em>LUOn</em>, <em>LUBy</em>, <em>Remarks] Index: []</em>, <em>application=Empty DataFrame Columns: [Application</em>, <em>DataFileName</em>, <em>LUOn</em>, <em>LUBy</em>, <em>Remarks] Index: []</em>, <em>tfmr_manuf=Empty DataFrame Columns: [TfmrManufacturer</em>, <em>Fullname</em>, <em>Headquarters</em>, <em>FactoryLoc1</em>, <em>FactoryLoc2</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>ltc_details=Empty DataFrame Columns: [LTCIdentifier</em>, <em>LTCSerialNum</em>, <em>TfmrIdentifier</em>, <em>LTCManufacturer</em>, <em>LTCIdentifierUnknown</em>, <em>LTCModel</em>, <em>Breather</em>, <em>Utility</em>, <em>OperatingCompany</em>, <em>Region</em>, <em>Substation</em>, <em>LTC_Designation</em>, <em>ManufactureDate</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>ltc_models=Empty DataFrame Columns: [LTCModel</em>, <em>ModelDesc</em>, <em>LTCManufacturer</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>ltc_dga=Empty DataFrame Columns: [LTCIdentifier</em>, <em>Compartment</em>, <em>SampleDate</em>, <em>LabTestDate</em>, <em>OilTempC</em>, <em>H2</em>, <em>CH4</em>, <em>C2H6</em>, <em>C2H4</em>, <em>C2H2</em>, <em>CO</em>, <em>CO2</em>, <em>O2</em>, <em>N2</em>, <em>BadSample</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>ltc_oq=Empty DataFrame Columns: [LTCIdentifier</em>, <em>Compartment</em>, <em>SampleDate</em>, <em>LabTestDate</em>, <em>OilTempC</em>, <em>MoisturePPM</em>, <em>Acidity</em>, <em>IFT</em>, <em>Color</em>, <em>D877</em>, <em>D1816_1MM</em>, <em>D1816_2MM</em>, <em>IEC156</em>, <em>PF_25C</em>, <em>PF_100C</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>ltc_tap_pos=Empty DataFrame Columns: [LTCIdentifier</em>, <em>RecordDate</em>, <em>TapPos</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>ltc_tap_count=Empty DataFrame Columns: [LTCIdentifier</em>, <em>RecordDate</em>, <em>CounterReading</em>, <em>HighTapPos</em>, <em>LowTapPos</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>ltc_service_history=Empty DataFrame Columns: [LTCIdentifier</em>, <em>LTCEventType</em>, <em>EventDate</em>, <em>PreviousStatus</em>, <em>ServiceStatus</em>, <em>FailureLoc</em>, <em>FailureConsequence</em>, <em>FailureCause</em>, <em>RepairBy</em>, <em>RepairLoc</em>, <em>RootCause</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>ltc_manuf=Empty DataFrame Columns: [LTCManufacturer</em>, <em>Fullname</em>, <em>Headquarters</em>, <em>FactoryLoc1</em>, <em>FactoryLoc2</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>bush_details=Empty DataFrame Columns: [BushingIdentifier</em>, <em>BushingSerialNum</em>, <em>TfmrIdentifier</em>, <em>PhaseInstalled</em>, <em>BushingManufacturer</em>, <em>BushingModel</em>, <em>Utility</em>, <em>OperatingCompany</em>, <em>Region</em>, <em>Substation</em>, <em>BushingDesignation</em>, <em>ManufactureDate</em>, <em>ConnectionType</em>, <em>BIL</em>, <em>RatedVoltage</em>, <em>RatedCurrent</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>bush_models=Empty DataFrame Columns: [BushingModelModelDesc</em>, <em>BushingManufacturer</em>, <em>DataFileName</em>, <em>LUOn</em>, <em>LUBy</em>, <em>Remarks] Index: []</em>, <em>bush_service_history=Empty DataFrame Columns: [BushingIdentifier</em>, <em>BushingEventType</em>, <em>EventDate</em>, <em>PreviousStatus</em>, <em>ServiceStatus</em>, <em>FailureLoc</em>, <em>FailureConsequence</em>, <em>FailureCause</em>, <em>RepairBy</em>, <em>RepairLoc</em>, <em>RootCause</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>bush_pf=Empty DataFrame Columns: [BushingIdentifier</em>, <em>Factoryresult</em>, <em>Precommissioning</em>, <em>TempHumidityInfo</em>, <em>TestDate</em>, <em>TestVoltagekV</em>, <em>C1PF</em>, <em>C1Cap</em>, <em>C2PF</em>, <em>C2Cap</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>bush_manuf=Empty DataFrame Columns: [BushingManufacturer</em>, <em>Fullname</em>, <em>Headquarters</em>, <em>FactoryLoc1</em>, <em>FactoryLoc2</em>, <em>DataFileName</em>, <em>CreatedBy</em>, <em>Remarks] Index: []</em>, <em>data_file_details=Empty DataFrame Columns: [DataFile</em>, <em>FileTypeExtension</em>, <em>Utility</em>, <em>TypeofData</em>, <em>ReceivedDate</em>, <em>ReceivedFrom</em>, <em>FilePathStorage] Index: []</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.xfmr_db_schema.xfmr_db_workbook" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function makes a workbook full of sheets containing field names for the xfmr db fields</p>
+<p>if no assignments a blank workbook is created</p>
+</dd></dl>
+
+</div>
+<span class="target" id="module-tfmr.nltk_pipes"></span><div class="section" id="tfmr-nltk-pipes">
+<h2>tfmr.nltk_pipes<a class="headerlink" href="#tfmr-nltk-pipes" title="Permalink to this headline">¶</a></h2>
+<p>tfmr sub-module initially created for identifying TfmrEventType words
+from large text fields using pdpipe module. working on other pipes</p>
+<dl class="function">
+<dt id="tfmr.nltk_pipes.get_stems">
+<code class="descclassname">tfmr.nltk_pipes.</code><code class="descname">get_stems</code><span class="sig-paren">(</span><em>df</em>, <em>column</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.nltk_pipes.get_stems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input string column, output word stems using pdpipe
+<a class="reference external" href="https://github.com/shaypal5/pdpipe">https://github.com/shaypal5/pdpipe</a></p>
+<p>This function uses pdpipe, an easy to use pandas piping library,
+to in turn use nltk to convert sentances into a list of word stems using
+ntltk functions tokenizer, remove stopwords and english snowball stemmer.</p>
+<ul class="simple">
+<li>TokenizeWords (<a class="reference external" href="https://www.nltk.org/api/nltk.tokenize.html">https://www.nltk.org/api/nltk.tokenize.html</a>),</li>
+<li>RemoveStopWords (<a class="reference external" href="https://stackoverflow.com/questions/5486337/how-to-remove-stop-words-using-nltk-or-python">https://stackoverflow.com/questions/5486337/how-to-remove-stop-words-using-nltk-or-python</a>),</li>
+<li>SnowballStemmer/EnglishStemmer (<a class="reference external" href="http://www.nltk.org/howto/stem.html">http://www.nltk.org/howto/stem.html</a>)}</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>df</strong> (<em>dataframe</em>) – dataframe of column to be stemmed</li>
+<li><strong>column</strong> (<em>dataframe</em>) – column to be stemmed</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Copied dataframe with new columns for each step (tokenize, remove stop words, stemmer)</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dataframe</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<span class="target" id="module-tfmr.regex"></span><div class="section" id="tfmr-regex">
+<h2>tfmr.regex<a class="headerlink" href="#tfmr-regex" title="Permalink to this headline">¶</a></h2>
+<p>tfmr sub-module initially created for containing various regex related functions</p>
+<dl class="function">
+<dt id="tfmr.regex.regex_date_tester">
+<code class="descclassname">tfmr.regex.</code><code class="descname">regex_date_tester</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#tfmr.regex.regex_date_tester" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function takes a string that might be a date and
+tries to match it with different date style regex strings.
+current pattern list:</p>
+<blockquote>
+<div><ul class="simple">
+<li>yyyy_mm_dd</li>
+<li>yyyymmdd_or_yyyyddmm</li>
+<li>mmddyyyy_or_ddmmyyyy</li>
+<li>yyyy</li>
+<li>mm_yyyy</li>
+<li>mmMONyy</li>
+<li></li>
+<li></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Mike Warren
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
