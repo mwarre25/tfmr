@@ -202,7 +202,7 @@ def regex_date_tester(string):
 
     for pattern in pattern_list:
         if re.match(pattern[0], string):
-            return pattern[1], True
+            return pattern[1], pattern[0], True
             break
     else:
-        return "No match", False
+        return "No match", "", False
