@@ -12,7 +12,7 @@ from sklearn.metrics import classification_report
 
 def failure_check(tblResults):
     """
-    This function checks for a column 'F' in a ptx tblResults df.
+    This function checks for a column 'F' in a tblResults df.
 
     If no 'F' in the df it creates one by looping through the df looking 
     for the string '_F' in the 'SERIALNUM' column.
@@ -93,7 +93,7 @@ def gas_check(dga):
         print('Gas Check Failed! | Not all DGA gases necessary to compute DGA diagnostic results are present in this dataset.\n')
 
 
-def ptx_check(tblResults):
+def sotfware_check(tblResults):
     """
     This function checks for set ['ABNORMALTHERMAL', 'ABNORMALELECTRICAL',
     'ABNORMALCORE'] in a dga df.
@@ -103,9 +103,9 @@ def ptx_check(tblResults):
     if set(['ABNORMALTHERMAL',
             'ABNORMALELECTRICAL',
             'ABNORMALCORE']).issubset(tblResults.columns):
-        print('PTX Check Passed! | All PTX index values are present in dataset.')
+        print('Software Check Passed! | All Software index values are present in dataset.')
     else:
-        print('PTX Check Failed! | Not all PTX index values are present in dataset. PTX cannot be evaluated until AT, AE, and AC present.')
+        print('Software Check Failed! | Not all Software index values are present in dataset. Software cannot be evaluated until AT, AE, and AC present.')
 
 
 def get_ratios_medians(dga):
@@ -192,12 +192,12 @@ def rand_forest(train_data, test_data):
     return rand_forest_performance
 
 
-def ptx_rules(tblResults):
+def software_rules(tblResults):
     """
-    this function calculates True and False for each sample based on PTX rules past and present
+    this function calculates True and False for each sample based on software rules past and present
     """
-    PTX_MAX_0_5 = []
-    PTX_CURRENT = []
+    SW_MAX_0_5 = []
+    SW_CURRENT = []
     tblResults = tblResults[:]
     for sn in tblResults.itertuples():
         AT = getattr(sn, 'ABNORMALTHERMAL')
@@ -205,22 +205,22 @@ def ptx_rules(tblResults):
         AC = getattr(sn, 'ABNORMALCORE')
 
         if (AT >= 0.5 or AE >= 0.5 or AC >= 0.5):
-            PTX_MAX_0_5.append('TRUE')
+            SW_MAX_0_5.append('TRUE')
         else:
-            PTX_MAX_0_5.append('FALSE')
+            SW_MAX_0_5.append('FALSE')
 
         if (AT >= 0.7 or AE >= 0.5 or AC >= 0.8):
-            PTX_CURRENT.append('TRUE')
+            SW_CURRENT.append('TRUE')
         else:
-            PTX_CURRENT.append('FALSE')
+            SW_CURRENT.append('FALSE')
 
-    print('There are ' + str(sum(i == 'TRUE' for i in PTX_MAX_0_5)) +
-          " TRUE values for PTX MAX(AT, AE, AT) rule")
-    tblResults['PTX_MAX_0_5'] = PTX_MAX_0_5
+    print('There are ' + str(sum(i == 'TRUE' for i in SW_MAX_0_5)) +
+          " TRUE values for SW MAX(AT, AE, AT) rule")
+    tblResults['SW_MAX_0_5'] = SW_MAX_0_5
 
-    print('There are ' + str(sum(i == 'TRUE' for i in PTX_CURRENT)) +
-          " TRUE values for PTX OR(AT > 0.7, AE > 0.5, AT > 0.8) rule")
-    tblResults['PTX_CURRENT'] = PTX_CURRENT
+    print('There are ' + str(sum(i == 'TRUE' for i in SW_CURRENT)) +
+          " TRUE values for SW OR(AT > 0.7, AE > 0.5, AT > 0.8) rule")
+    tblResults['SW_CURRENT'] = SW_CURRENT
     return tblResults
 
 
