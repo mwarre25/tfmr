@@ -180,7 +180,7 @@ def regex_date_tester(string):
         '^(january|february|march|april|may|june|july|august|september|october|november|december)(\d{2})$',
         'monthyy')
     month_pattern = (
-        '^january|february|march|april|may|june|july|august|september|october|november|december|jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec$',
+        '^january$|^february$|^march$|^april$|^may$|^june$|^july$|^august$|^september$|^october$|^november$|^december$|^jan$|^feb$|^mar$|^apr$|^may$|^jun$|^jul$|^aug$|^sep$|^oct$|^nov$|^dec$',
         'month')
     myyyy_or_mmyyyy_pattern = ('^([1-9]|1[0-2])(19|20)\d{2}$', 'myyyy')
     mmdyyyy_or_mddyyyy_pattern = (
