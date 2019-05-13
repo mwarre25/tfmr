@@ -955,12 +955,14 @@ def schema_0_workbook(**kwargs):
 
     if 'qryDGA' in kwargs:
         try:
+            qryDGA = kwargs['qryDGA']
             qryDGA.to_excel(writer, sheet_name="qryDGA", index=False)
         except Exception as e:
             print('loading qryDGA failed b/c: ' + str(e))
 
     if 'qryOilQuality' in kwargs:
         try:
+            qryOilQuality = kwargs['qryOilQuality']
             qryOilQuality.to_excel(writer,
                                    sheet_name="qryOilQuality",
                                    index=False)
@@ -969,24 +971,28 @@ def schema_0_workbook(**kwargs):
 
     if 'qryFurans' in kwargs:
         try:
+            qryFurans = kwargs['qryFurans']
             qryFurans.to_excel(writer, sheet_name="qryFurans", index=False)
         except Exception as e:
             print('loading qryFurans failed b/c: ' + str(e))
 
     if 'qryLTC' in kwargs:
         try:
+            qryLTC = kwargs['qryLTC']
             qryLTC.to_excel(writer, sheet_name="qryLTC", index=False)
         except Exception as e:
             print('loading qryLTC failed b/c: ' + str(e))
 
     if 'qryLTCDGA' in kwargs:
         try:
+            qryLTCDGA = kwargs['qryLTCDGA']
             qryLTCDGA.to_excel(writer, sheet_name="qryLTCDGA", index=False)
         except Exception as e:
             print('loading qryLTCDGA failed b/c: ' + str(e))
 
     if 'qryLTCOilQuality' in kwargs:
         try:
+            qryLTCOilQuality = kwargs['qryLTCOilQuality']
             qryLTCOilQuality.to_excel(writer,
                                       sheet_name="qryLTCOilQuality",
                                       index=False)
@@ -995,6 +1001,7 @@ def schema_0_workbook(**kwargs):
 
     if 'qryLTCTapCount' in kwargs:
         try:
+            qryLTCTapCount = kwargs['qryLTCTapCount']
             qryLTCTapCount.to_excel(writer,
                                     sheet_name="qryLTCTapCount",
                                     index=False)
@@ -1003,6 +1010,7 @@ def schema_0_workbook(**kwargs):
 
     if 'qryLTCTapPosition' in kwargs:
         try:
+            qryLTCTapPosition = kwargs['qryLTCTapPosition']
             qryLTCTapPosition.to_excel(writer,
                                        sheet_name="qryLTCTapPosition",
                                        index=False)
@@ -1011,6 +1019,7 @@ def schema_0_workbook(**kwargs):
 
     if 'qryInsulationPF' in kwargs:
         try:
+            qryInsulationPF = kwargs['qryInsulationPF']
             qryInsulationPF.to_excel(writer,
                                      sheet_name="qryInsulationPF",
                                      index=False)
@@ -1019,6 +1028,7 @@ def schema_0_workbook(**kwargs):
 
     if 'qrySelectorDGA' in kwargs:
         try:
+            qrySelectorDGA = kwargs['qrySelectorDGA']
             qrySelectorDGA.to_excel(writer,
                                     sheet_name="qrySelectorDGA",
                                     index=False)
@@ -1027,6 +1037,7 @@ def schema_0_workbook(**kwargs):
 
     if 'qrySelectorOilQuality' in kwargs:
         try:
+            qrySelectorOilQuality = kwargs['qrySelectorOilQuality']
             qrySelectorOilQuality.to_excel(writer,
                                            sheet_name="qrySelectorOilQuality",
                                            index=False)
@@ -1035,6 +1046,7 @@ def schema_0_workbook(**kwargs):
 
     if 'qryDiverterDGA' in kwargs:
         try:
+            qryDiverterDGA = kwargs['qryDiverterDGA']
             qryDiverterDGA.to_excel(writer,
                                     sheet_name="qryDiverterDGA",
                                     index=False)
@@ -1043,6 +1055,7 @@ def schema_0_workbook(**kwargs):
 
     if 'qryDiverterOilQuality' in kwargs:
         try:
+            qryDiverterOilQuality = kwargs['qryDiverterOilQuality']
             qryDiverterOilQuality.to_excel(writer,
                                            sheet_name="qryDiverterOilQuality",
                                            index=False)
@@ -1051,12 +1064,14 @@ def schema_0_workbook(**kwargs):
 
     if 'qryBushing' in kwargs:
         try:
+            qryBushing = kwargs['qryBushing']
             qryBushing.to_excel(writer, sheet_name="qryBushing", index=False)
         except Exception as e:
             print('loading qryBushing failed b/c: ' + str(e))
 
     if 'qryBushingPowerFactor' in kwargs:
         try:
+            qryBushingPowerFactor = kwargs['qryBushingPowerFactor']
             qryBushingPowerFactor.to_excel(writer,
                                            sheet_name="qryBushingPowerFactor",
                                            index=False)
@@ -1065,6 +1080,7 @@ def schema_0_workbook(**kwargs):
 
     if 'tblComments' in kwargs:
         try:
+            tblComments = kwargs['tblComments']
             tblComments.to_excel(writer, sheet_name="tblComments", index=False)
         except Exception as e:
             print('loading tblComments failed b/c: ' + str(e))
