@@ -948,6 +948,7 @@ def schema_0_workbook(**kwargs):
     # Convert the dataframe to an XlsxWriter Excel object
     if 'qryTfmrs' in kwargs:
         try:
+            qryTfmrs = kwargs['qryTfmrs']
             qryTfmrs.to_excel(writer, sheet_name="qryTfmrs", index=False)
         except Exception as e:
             print('loading qryTfmrs failed b/c: ' + str(e))
