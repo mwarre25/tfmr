@@ -4,6 +4,7 @@ tfmr.lists
 tfmr sub-module for storing common schema_0 and schema_1 lists
 """
 
+
 def qryTfmrsManufacturerList():
     '''Returns current schema_0 manufacturer list.
 
@@ -86,7 +87,7 @@ def qryLTCsModelList():
             "RT 25", "RT 32", "RT 34", "RT 35",
             "RT 69", "T", "TC-15", "TC-23",
             "TC-25", "TC-34", "TC-46", "TC-515",
-            "TC-525", "TC-546", "TDR", "TLB", 
+            "TC-525", "TC-546", "TDR", "TLB",
             "TLC", "TLF-20", "TLF-30", "TLG",
             "TLH", "TLH-10", "TLH-20", "TLH-21",
             "TLS", "UBB", "UCC", "UCD", "UCG",
@@ -106,3 +107,47 @@ def qryLTCBreatherList():
 
     '''
     return(["Sealed", "Free"])
+
+
+def tfmrEventTypeList():
+    '''Return the current schema_1 TfmrEventType list for the TfmrServiceHistory table.
+
+    Returns:
+            List of strings
+
+    '''
+    return(["Relocation",
+            "Scrap",
+            "Rewind",
+            "Retire",
+            "Repair",
+            "Inspection",
+            "Failure",
+            "Commissioning",
+            "Manufacture",
+            "Replacement",
+            "Retire"])
+
+
+def tfmrServiceStatusList():
+    '''Return the current schema_1 ServiceStatus list for the TfmrServiceHistory table.
+
+    Returns:
+            List of strings
+
+    '''
+    return(['Emergency spare',
+            'Not returned to service',
+            'Other',
+            'Repaired and returned to service',
+            'Repaired and relocated',
+            'Rewound and relocated',
+            'Repaired to spare',
+            'Rewound to spare',
+            'Retired',
+            'Returned to service',
+            'Rewound and returned to service',
+            'Scrapped',
+            'Spare',
+            'Unknown',
+            ])
