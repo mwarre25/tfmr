@@ -589,4 +589,70 @@ def schema_1LTCModelsList():
             'V2A',
             'VRC',
             'VUCG',
-            'VV',])
+            'VV', ])
+
+
+def BushingManufacturerList():
+    '''Return the current schema_1 BushingManufacturer list for the BushingDetails table.
+
+    Returns:
+            List of strings
+
+    '''
+    return(['ABB',
+            'ECI',
+            'GE',
+            'HEAFT',
+            'HSP',
+            'LAPP',
+            'MCGR',
+            'MICA',
+            'OHIO',
+            'PCORE',
+            'PENN',
+            'PIED',
+            'PROLEC',
+            'SIEM',
+            'TRENCH',
+            'WAUK',
+            'WEST',
+            ])
+
+
+def BushingModelList():
+    '''Return the current schema_1 BushingModel list for the BushingDetails table.
+
+    Returns:
+            List of strings
+
+    '''
+    return(['A',
+            'AB',
+            'COTA',
+            'F',
+            'FS',
+            'G',
+            'GK',
+            'GK30',
+            'GK40',
+            'LCRJ',
+            'O',
+            'OF',
+            'OPLUSC',
+            'OS',
+            'P',
+            'PA',
+            'PB',
+            'POC',
+            'POCA',
+            'PRC',
+            'PRCA',
+            'R10',
+            'RTF',
+            'RTXF',
+            'S',
+            'SDC',
+            'SETFTA',
+            'T',
+            'U',
+            ])
