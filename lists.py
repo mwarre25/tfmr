@@ -217,3 +217,47 @@ def tfmrFailedComponentList():
             'Winding',
             'Valves',
             ])
+
+
+def tfmrFailureConsequenceList():
+    '''Return the current schema_1 FailureConsequence list for the TfmrServiceHistory table.
+
+    Returns:
+            List of strings
+
+    '''
+    return(['Ageing',
+            'Collateral',
+            'Degraded Condition',
+            'Dielectric Breakdown',
+            'Excess Temperatures',
+            'Expulsion of Insulating Fluid',
+            'External short-circuit',
+            'Fails To Carry Load',
+            'Fails To Regulate Voltage',
+            'Fire',
+            'Fluid Contamination',
+            'Geomagnetic disturbance',
+            'High Combustible Gas',
+            'Impedence Change',
+            'Improper maintenance',
+            'Improper repair',
+            'Installation at site',
+            'Lead',
+            'Loss of Fans',
+            'Loss of Pumps',
+            'LTC',
+            'LTC Terminal Board Broke',
+            'Other',
+            'Overheating',
+            'Overload',
+            'Overvoltage(switching)',
+            'Repeated external-short-circuit',
+            'Rupture of Tank',
+            'Sulphur corrosion',
+            'Tap Changer Malfunction',
+            'Tertiary',
+            'Tertiary series',
+            'Winding',
+            'Windings',
+            ])
