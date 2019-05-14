@@ -264,7 +264,7 @@ def tfmrFailureConsequenceList():
 
 
 def tfmrTypeList():
-    '''Return the current schema_1 TfmrType list for the TfmrServiceHistory table.
+    '''Return the current schema_1 TfmrType list for the TfmrDetails table.
 
     Returns:
             List of strings
@@ -285,7 +285,7 @@ def tfmrTypeList():
 
 
 def schema_1TfmrManufacturerList():
-    '''Return the current schema_1 TfmrType list for the TfmrServiceHistory table.
+    '''Return the current schema_1 TfmrType list for the TfmrDetails table.
 
     Returns:
             List of strings
@@ -377,3 +377,216 @@ def schema_1TfmrManufacturerList():
             'XD',
             'YET',
             ])
+
+
+def TfmrApplicationList():
+    '''Return the current schema_1 TfmrApplication list for the TfmrDetails table.
+
+    Returns:
+            List of strings
+
+    '''
+    return(['Auxiliary',
+            'Distribution',
+            'Grounding',
+            'GSU',
+            'Spare',
+            'Sub Transmission',
+            'Substation',
+            'Transmission',
+            'Zig-Zag',
+            ])
+
+
+def schema_1LTCManufacturersList():
+    '''Return the current schema_1 LTCManufacturers list for the LTCDetails table.
+
+    Returns:
+            List of strings
+
+    '''
+    return(['ABB',
+            'ALLIS',
+            'ASEA',
+            'CG',
+            'COOP',
+            'EE',
+            'FEDPAC',
+            'FEDPION',
+            'FERR',
+            'GE',
+            'HITA',
+            'MAGN',
+            'MCGR',
+            'MOLO',
+            'MR',
+            'NATCO',
+            'PENN',
+            'SIEM',
+            'TU',
+            'WAUK',
+            'WEST',
+            ])
+
+
+def schema_1LTCModelsList():
+    '''Return the current schema_1 LTCModels list for the LTCDetails table.
+
+    Returns:
+            List of strings
+
+    '''
+    return(['220',
+            '333',
+            '393',
+            '394',
+            '396',
+            '397',
+            '397D',
+            '442',
+            '494',
+            '496',
+            '550',
+            '550B',
+            '550C',
+            '660',
+            '995',
+            '996',
+            'A',
+            'AVT',
+            'C',
+            'CLR100',
+            'CRND702',
+            'D',
+            'DIII200',
+            'E',
+            'F',
+            'FDA',
+            'G',
+            'H',
+            'K',
+            'L700',
+            'LK',
+            'LR27',
+            'LR29',
+            'LR300',
+            'LR38',
+            'LR45',
+            'LR48',
+            'LR500',
+            'LR59',
+            'LR65',
+            'LR68',
+            'LR72',
+            'LR79',
+            'LR83',
+            'LR85',
+            'LR89',
+            'LR9',
+            'LR91',
+            'LRB',
+            'LRN',
+            'LRT200',
+            'LRT2001',
+            'LRT2002',
+            'LRT200A',
+            'LRT200A2',
+            'LRT300',
+            'LRT400',
+            'LRT500',
+            'LRT59',
+            'LRT69',
+            'LRT700',
+            'LRT72',
+            'LRT81',
+            'LRT9',
+            'M',
+            'MA1',
+            'MA2',
+            'MB',
+            'MB1',
+            'MB2',
+            'MC8',
+            'MH',
+            'MJ2',
+            'MLPN77',
+            'MS',
+            'R',
+            'RM',
+            'RMS',
+            'RMT',
+            'RMVA',
+            'RMVII',
+            'RT25',
+            'RT32',
+            'RT34',
+            'RT35',
+            'RT69',
+            'T',
+            'TC15',
+            'TC23',
+            'TC25',
+            'TC322',
+            'TC34',
+            'TC342',
+            'TC343',
+            'TC34M',
+            'TC46',
+            'TC515',
+            'TC525',
+            'TC546',
+            'TDR',
+            'TIII600',
+            'TLB',
+            'TLC',
+            'TLF20',
+            'TLF30',
+            'TLG',
+            'TLH',
+            'TLH10',
+            'TLH20',
+            'TLH21',
+            'TLS',
+            'TR',
+            'UB',
+            'UBB',
+            'UC',
+            'UCC',
+            'UCD',
+            'UCG',
+            'UCGRT',
+            'UCL',
+            'UNR',
+            'UR',
+            'URH',
+            'URN',
+            'URS',
+            'URT',
+            'URTHC',
+            'USB',
+            'UT',
+            'UTB',
+            'UTC',
+            'UTH',
+            'UTR',
+            'UTS',
+            'UTSA',
+            'UTT',
+            'UTTA',
+            'UTTB',
+            'UVT',
+            'UVW',
+            'UZ',
+            'UZD',
+            'UZDRT',
+            'UZE',
+            'UZERN',
+            'UZF',
+            'UZG',
+            'V',
+            'V1',
+            'V2',
+            'V2A',
+            'VRC',
+            'VUCG',
+            'VV',])
