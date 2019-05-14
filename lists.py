@@ -151,3 +151,37 @@ def tfmrServiceStatusList():
             'Spare',
             'Unknown',
             ])
+
+
+def tfmrRootCauseList():
+    '''Return the current schema_1 RootCause list for the TfmrServiceHistory table.
+
+    Returns:
+            List of strings
+
+    '''
+    return(['Bushing failure',
+            'Winding movement',
+            'Dielectric failure',
+            'Shield ring overheating',
+            'Broken conductor in winding',
+            'Unknown',
+            'Circulating current',
+            'Coking fault',
+            'Lightning strike',
+            'Contamination',
+            'GIC damage',
+            'Internal short circuit',
+            'Inter-turn fault',
+            'Localized conductor errosion',
+            'Mechanical failure',
+            'Overheating',
+            'Partial discharge',
+            'Winding collapse',
+            'Sulphur corrosion',
+            'Solid insulation ageing',
+            'Incorrectly positioned oil guide',
+            'Tapchanger failure',
+            'Tank breach',
+            'Fire',
+            ])
