@@ -185,3 +185,35 @@ def tfmrRootCauseList():
             'Tank breach',
             'Fire',
             ])
+
+
+def tfmrFailedComponentList():
+    '''Return the current schema_1 FailedComponent list for the TfmrServiceHistory table.
+
+    Returns:
+            List of strings
+
+    '''
+    return(['Bushing',
+            'Lead',
+            'Auxiliary Equipment',
+            'Connections',
+            'Contacts',
+            'Core',
+            'Core Insulation',
+            'Core steel',
+            'Crimps',
+            'Current Transformer',
+            'Design',
+            'Dielectric',
+            'Load Tap Changer',
+            'Bus',
+            'Ground strap',
+            'Heat exchanger',
+            'Leads board terminal',
+            'Magnetic circuit',
+            'Tank',
+            'Surge Arrestor',
+            'Winding',
+            'Valves',
+            ])
