@@ -6,6 +6,7 @@ tfmr sub-module for transforming tfmr data
 import pandas as pd
 import re
 import pdpipe as pdp
+import numpy as np
 
 import tfmr.lists as lists
 
@@ -116,7 +117,7 @@ def string_year_to_datetime(string_list):
             date_list.append((row, pd.to_datetime('1/1/' + row)))
         except Exception as e:
             print(str(row) + ' might not be year string, appending original value')
-            date_list.append(row)
+        date_list.append((row,np.nat))
     return date_list
 
 def get_stems(df, column):
