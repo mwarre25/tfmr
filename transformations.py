@@ -117,7 +117,7 @@ def string_year_to_datetime(string_list):
             date_list.append((row, pd.to_datetime('1/1/' + row)))
         except Exception as e:
             print(str(row) + ' might not be year string, appending original value')
-        date_list.append((row,np.nat))
+            date_list.append((row, np.NaN))
     return date_list
 
 def get_stems(df, column):
