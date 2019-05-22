@@ -6,6 +6,7 @@ tfmr sub-module for creating schema_1 tables
 import pandas as pd
 import datetime as dt
 import tfmr.lists
+import numpy as np
 now = dt.datetime.now().strftime('%Y-%m-%d_%I%M%p').upper()
 
 def column_check(df_to_check, schema_df):
@@ -13,9 +14,9 @@ def column_check(df_to_check, schema_df):
         left_set = set(df_to_check.columns.values.tolist())
         right_set = set(schema_df.columns.values.tolist())
         if left_set == right_set:
-            print('Column Check PASSED!\n')
+            print('Column Check PASSED!\n--------------------\n')
         else:
-            print('Column Check FAILED!\n')
+            print('Column Check FAILED!\n--------------------\n')
 
             print('The following fields are in the dataframe under test but not in the schema:\n')
             print(str(left_set.difference(right_set))+'\n')
@@ -28,13 +29,13 @@ def foreign_key_subset_check(df_column_to_check, foreign_key_value_list):
     left_set = set(df_column_to_check.unique().tolist())
     right_set = set(foreign_key_value_list)
     if left_set.issubset(right_set):
-        print(df_column_to_check.name + ' Foreign Key Subset Check PASSED!\n')
+        print(df_column_to_check.name + ' Foreign Key Subset Check PASSED!\n'+'-'*len(df_column_to_check.name)+'---------------------------------\n')
     else:
-        print(df_column_to_check.name + ' Foreign Key Subset Check FAILED!\n')
+        print(df_column_to_check.name + ' Foreign Key Subset Check FAILED!\n'+'-'*len(df_column_to_check.name)+'---------------------------------\n')
 
         print('The following values are in the dataframe column under test but not in the foreign key value table list:\n')
         print(str(left_set.difference(right_set))+'\n')
-        print('These values should be checked for validity then added (as part of a whole entry) to the foreign key table.')
+        print('These values should be checked for validity then added (as part of a whole entry) to the foreign key table.\n')
 
 
 def blank_tfmr_details():
@@ -62,16 +63,16 @@ def tfmr_details_report(tfmr_details_df):
     column_check(tfmr_details_df, blank_tfmr_details())
 
     # TfmrManufacturers
-    foreign_key_subset_check(tfmr_details_df['TfmrManufacturer'],tfmr.lists.schema_1TfmrManufacturerList)
+    foreign_key_subset_check(tfmr_details_df['TfmrManufacturer'],tfmr.lists.schema_1TfmrManufacturerList())
 
     # Utilities
-    foreign_key_subset_check(tfmr_details_df['Utility'],tfmr.lists.schema_1UtilitiesList)
+    foreign_key_subset_check(tfmr_details_df['Utility'],tfmr.lists.schema_1UtilitiesList())
 
     # Application
-    foreign_key_subset_check(tfmr_details_df['Application'],tfmr.lists.TfmrApplicationList)
+    foreign_key_subset_check(tfmr_details_df['Application'],tfmr.lists.TfmrApplicationList())
 
     # TfmrType
-    foreign_key_subset_check(tfmr_details_df['TfmrType'],tfmr.lists.tfmrTypeList)
+    foreign_key_subset_check(tfmr_details_df['TfmrType'],tfmr.lists.tfmrTypeList())
 
 
 
