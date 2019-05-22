@@ -5,12 +5,22 @@ tfmr sub-module for creating schema_1 tables
 """
 import pandas as pd
 import datetime as dt
+import tfmr.lists
 now = dt.datetime.now().strftime('%Y-%m-%d_%I%M%p').upper()
 
+def column_check(df_to_check, schema_df):
+        """are all columns in the dataframe"""
+        left_set = set(df_to_check.columns.values.tolist())
+        right_set = set(schema_df.columns.values.tolist())
+        if left_set == right_set:
+            print('column check passed')
+        else:
+            print('column check failed')
+            print(str(left_set.difference(right_set))+ " in left list but not in right list.")
+            print(str(right_set.difference(left_set))+ " in right list but not in left list.")
 
 def blank_tfmr_details():
-    """
-    initializes blank tfmr_details dataframe
+    """initializes blank tfmr_details dataframe
     """
     blank_tfmr_details_list = [
         'TfmrIdentifier', 'TfmrSerialNum', 'TfmrManufacturer',
@@ -26,6 +36,14 @@ def blank_tfmr_details():
     blank_tfmr_details = pd.DataFrame(columns=blank_tfmr_details_list)
 
     return blank_tfmr_details
+
+
+def tfmr_details_report(tfmr_details_df):
+    """tests a tfmr_details dataframe outputting some summary
+    """
+    
+    pass
+
 
 
 def blank_tfmr_service_history():
