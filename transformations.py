@@ -119,7 +119,7 @@ def string_year_to_datetime(string_list):
             # print(str(row) + ' might not be year string, appending original value')
             date_list.append(np.NaN)
             exception_list.append(row)
-    print('List of incompatible values. Replaced with nan in output:')
+    print('string_year_to_datetime function:\nSet of incompatible values. Replaced with nan in returned output:')
     print(set(exception_list))
     return date_list
 

@@ -23,6 +23,20 @@ def column_check(df_to_check, schema_df):
             print('The following fields are in the schema but do not appear in the df under test:\n')
             print(str(right_set.difference(left_set))+ " in schema but not in df under test.\n")
 
+def foreign_key_subset_check(df_column_to_check, foreign_key_value_list):
+    """are all the unique values in a foreign key column a subset of the foreign key column list?"""
+    left_set = set(df_column_to_check.unique().tolist())
+    right_set = set(foreign_key_value_list)
+    if left_set.issubset(right_set):
+        print(df_column_to_check.name + ' Foreign Key Subset Check PASSED!\n')
+    else:
+        print(df_column_to_check.name + ' Foreign Key Subset Check FAILED!\n')
+
+        print('The following values are in the dataframe column under test but not in the foreign key value table list:\n')
+        print(str(left_set.difference(right_set))+'\n')
+        print('These values should be checked for validity then added (as part of a whole entry) to the foreign key table.')
+
+
 def blank_tfmr_details():
     """initializes blank tfmr_details dataframe
     """
@@ -46,7 +60,18 @@ def tfmr_details_report(tfmr_details_df):
     """tests a tfmr_details dataframe outputting some summary
     """
     column_check(tfmr_details_df, blank_tfmr_details())
-    pass
+
+    # TfmrManufacturers
+    foreign_key_subset_check(tfmr_details_df['TfmrManufacturer'],tfmr.lists.schema_1TfmrManufacturerList)
+
+    # Utilities
+    foreign_key_subset_check(tfmr_details_df['Utility'],tfmr.lists.schema_1UtilitiesList)
+
+    # Application
+    foreign_key_subset_check(tfmr_details_df['Application'],tfmr.lists.TfmrApplicationList)
+
+    # TfmrType
+    foreign_key_subset_check(tfmr_details_df['TfmrType'],tfmr.lists.tfmrTypeList)
 
 
 
