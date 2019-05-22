@@ -99,8 +99,7 @@ def string_to_bool():
 
 
 def string_year_to_datetime(string_list):
-    '''NOT CURRENTLY IMPLEMENTED: 
-    Takes as input list of year strings, i.e. '1950',
+    '''Takes as input list of year strings, i.e. '1950',
     then appends '1/1' to string and changes string to datetime.
 
     Args:
@@ -112,12 +111,16 @@ def string_year_to_datetime(string_list):
         only the original value is passed back.
     '''
     date_list = []
+    exception_list = []
     for row in string_list:
         try:
             date_list.append(pd.to_datetime('1/1/' + row))
         except Exception as e:
-            print(str(row) + ' might not be year string, appending original value')
+            # print(str(row) + ' might not be year string, appending original value')
             date_list.append(np.NaN)
+            exception_list.append(row)
+    print('List of incompatible values. Replaced with nan in output:')
+    exception_list
     return date_list
 
 def get_stems(df, column):
