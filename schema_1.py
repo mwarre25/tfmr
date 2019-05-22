@@ -16,8 +16,8 @@ def column_check(df_to_check, schema_df):
             print('column check passed')
         else:
             print('column check failed')
-            print(str(left_set.difference(right_set))+ " in left list but not in right list.")
-            print(str(right_set.difference(left_set))+ " in right list but not in left list.")
+            print(str(left_set.difference(right_set))+ " in df under test but not in schema.")
+            print(str(right_set.difference(left_set))+ " in schema but not in df under test.")
 
 def blank_tfmr_details():
     """initializes blank tfmr_details dataframe
