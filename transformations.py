@@ -120,7 +120,7 @@ def string_year_to_datetime(string_list):
             date_list.append(np.NaN)
             exception_list.append(row)
     print('List of incompatible values. Replaced with nan in output:')
-    print(exception_list)
+    print(set(exception_list))
     return date_list
 
 def get_stems(df, column):
