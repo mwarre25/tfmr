@@ -523,7 +523,7 @@ def blank_tblResultsOverTime():
     Returns:
         dataframe: dataframe with tblResultsOverTime schema
     """
-    tblResults_list = [
+    tblResultsOverTime_list = [
         "ID", "SERIALNUM", "RUNDATETIME", "RESULTDATETIME",
         "NORMALDEGRADATION", "ABNORMALTHERMAL", "ABNORMALELECTRICAL",
         "ABNORMALCORE", "OILQUALITY", "BUSHINGCONDITION", "LTCCONDITION"
@@ -545,7 +545,6 @@ def blank_tblResultsOverTime():
             "ABNORMALTHERMAL",
             "ABNORMALELECTRICAL",
             "ABNORMALCORE",
-            "ABNORMALCONDITION",
             "OILQUALITY",
             "BUSHINGCONDITION",
             "LTCCONDITION",

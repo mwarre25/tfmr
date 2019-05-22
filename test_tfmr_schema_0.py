@@ -433,119 +433,94 @@ class TestSchema0(unittest.TestCase):
     def test_blank_tblComments(self):
         '''Making sure schema doesn't change from this version, for tblComments
         '''
-        qryBushing_list = [
-            "ID", "TFMRID", "BUSHINGID", "MANUFACTURER", "MODEL",
-            "CONNECTIONTYPE", "BIL", "RATEDVOLTAGE", "RATEDCURRENT",
-            "FACTORYC1PF", "FACTORYC1CAP", "FACTORYC2PF", "FACTORYC2CAP"
-        ]
+        tblComments_list = ['COMPONENTID', 'COMMENTDATE', 'COMMENTTEXT']
 
-        test_qryBushing = pd.DataFrame(columns=qryBushing_list)
+        test_tblComments = pd.DataFrame(columns=tblComments_list)
 
         # strings
         for col in [
-                "TFMRID", "BUSHINGID", "MANUFACTURER", "MODEL", "CONNECTIONTYPE"
+                'COMPONENTID',
+                'COMMENTTEXT',
         ]:
-            test_qryBushing[col] = test_qryBushing[col].astype("str")
+            test_tblComments[col] = test_tblComments[col].astype("str")
 
-        # floats
-        for col in [
-                "BIL",
-                "RATEDVOLTAGE",
-                "RATEDCURRENT",
-                "FACTORYC1PF",
-                "FACTORYC1CAP",
-                "FACTORYC2PF",
-                "FACTORYC2CAP",
-        ]:
-            test_qryBushing[col] = test_qryBushing[col].astype("float")
-
-        # ints
-        for col in ["ID"]:
-            test_qryBushing[col] = test_qryBushing[col].astype("int")
+        # dates
+        for col in ["COMMENTDATE"]:
+            test_tblComments[col] = pd.to_datetime(test_tblComments[col])
 
         pd.testing.assert_frame_equal(
-            test_qryBushing, tfmr.schema_0.blank_qryBushing())
+            test_tblComments, tfmr.schema_0.blank_tblComments())
 
     def test_blank_tblResultsDetails(self):
         '''Making sure schema doesn't change from this version, for tblResultsDetails
         '''
-        qryBushing_list = [
-            "ID", "TFMRID", "BUSHINGID", "MANUFACTURER", "MODEL",
-            "CONNECTIONTYPE", "BIL", "RATEDVOLTAGE", "RATEDCURRENT",
-            "FACTORYC1PF", "FACTORYC1CAP", "FACTORYC2PF", "FACTORYC2CAP"
-        ]
+        tblResultsDetails_list = [
+        "ID", "RUNDATETIME", "DIAGNOSISDATE", "SERIALNUM", "RESULTVALIDDATE",
+        "FAILUREMECHANISM", "BELIEF"]
 
-        test_qryBushing = pd.DataFrame(columns=qryBushing_list)
+        test_tblResultsDetails = pd.DataFrame(columns=tblResultsDetails_list)
 
         # strings
-        for col in [
-                "TFMRID", "BUSHINGID", "MANUFACTURER", "MODEL", "CONNECTIONTYPE"
-        ]:
-            test_qryBushing[col] = test_qryBushing[col].astype("str")
+        for col in ["SERIALNUM", "FAILUREMECHANISM"]:
+            test_tblResultsDetails[col] = test_tblResultsDetails[col].astype("str")
+
+        # dates
+        for col in ["RUNDATETIME", "DIAGNOSISDATE", "RESULTVALIDDATE"]:
+            test_tblResultsDetails[col] = pd.to_datetime(test_tblResultsDetails[col])
 
         # floats
-        for col in [
-                "BIL",
-                "RATEDVOLTAGE",
-                "RATEDCURRENT",
-                "FACTORYC1PF",
-                "FACTORYC1CAP",
-                "FACTORYC2PF",
-                "FACTORYC2CAP",
-        ]:
-            test_qryBushing[col] = test_qryBushing[col].astype("float")
+        for col in ["BELIEF"]:
+            test_tblResultsDetails[col] = test_tblResultsDetails[col].astype("float")
 
         # ints
         for col in ["ID"]:
-            test_qryBushing[col] = test_qryBushing[col].astype("int")
+            test_tblResultsDetails[col] = test_tblResultsDetails[col].astype("int")
 
         pd.testing.assert_frame_equal(
-            test_qryBushing, tfmr.schema_0.blank_qryBushing())
+            test_tblResultsDetails, tfmr.schema_0.blank_tblResultsDetails())
 
     def test_blank_tblResultsOverTime(self):
         '''Making sure schema doesn't change from this version, for tblResultsOverTime
         '''
-        qryBushing_list = [
-            "ID", "TFMRID", "BUSHINGID", "MANUFACTURER", "MODEL",
-            "CONNECTIONTYPE", "BIL", "RATEDVOLTAGE", "RATEDCURRENT",
-            "FACTORYC1PF", "FACTORYC1CAP", "FACTORYC2PF", "FACTORYC2CAP"
-        ]
+        tblResultsOverTime_list = [
+        "ID", "SERIALNUM", "RUNDATETIME", "RESULTDATETIME",
+        "NORMALDEGRADATION", "ABNORMALTHERMAL", "ABNORMALELECTRICAL",
+        "ABNORMALCORE", "OILQUALITY", "BUSHINGCONDITION", "LTCCONDITION"]
 
-        test_qryBushing = pd.DataFrame(columns=qryBushing_list)
+        test_tblResultsOverTime = pd.DataFrame(columns=tblResultsOverTime_list)
 
         # strings
-        for col in [
-                "TFMRID", "BUSHINGID", "MANUFACTURER", "MODEL", "CONNECTIONTYPE"
-        ]:
-            test_qryBushing[col] = test_qryBushing[col].astype("str")
+        for col in ["SERIALNUM"]:
+            test_tblResultsOverTime[col] = test_tblResultsOverTime[col].astype("str")
+        # dates
+        for col in ["RUNDATETIME", "RESULTDATETIME"]:
+            test_tblResultsOverTime[col] = pd.to_datetime(test_tblResultsOverTime[col])
 
         # floats
         for col in [
-                "BIL",
-                "RATEDVOLTAGE",
-                "RATEDCURRENT",
-                "FACTORYC1PF",
-                "FACTORYC1CAP",
-                "FACTORYC2PF",
-                "FACTORYC2CAP",
+                "NORMALDEGRADATION",
+                "ABNORMALTHERMAL",
+                "ABNORMALELECTRICAL",
+                "ABNORMALCORE",
+                "OILQUALITY",
+                "BUSHINGCONDITION",
+                "LTCCONDITION",
         ]:
-            test_qryBushing[col] = test_qryBushing[col].astype("float")
-
-        # ints
-        for col in ["ID"]:
-            test_qryBushing[col] = test_qryBushing[col].astype("int")
+            test_tblResultsOverTime[col] = test_tblResultsOverTime[col].astype("float")
 
         pd.testing.assert_frame_equal(
-            test_qryBushing, tfmr.schema_0.blank_qryBushing())
+            test_tblResultsOverTime, tfmr.schema_0.blank_tblResultsOverTime())
 
     def test_blank_workbook(self):
         '''testing test_schema_0_workbook function
         '''
+        # I think I'll actually need an external file for this
         pass
 
     def test_schema_0_workbook(self):
         '''testing test_schema_0_workbook function
         '''
+        # I think I'll actually need an external file for this
         pass
 
     def test_tblResultsCompare(self):
