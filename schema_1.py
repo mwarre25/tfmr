@@ -13,10 +13,14 @@ def column_check(df_to_check, schema_df):
         left_set = set(df_to_check.columns.values.tolist())
         right_set = set(schema_df.columns.values.tolist())
         if left_set == right_set:
-            print('column check PASSED!\n')
+            print('Column Check PASSED!\n')
         else:
-            print('column check FAILED!\n')
-            print(str(left_set.difference(right_set))+ " in df under test but not in schema.\n")
+            print('Column Check FAILED!\n')
+
+            print('The following fields are in the dataframe under test but not in the schema:\n')
+            print(str(left_set.difference(right_set))+'\n')
+            
+            print('The following fields are in the schema but do not appear in the df under test:\n')
             print(str(right_set.difference(left_set))+ " in schema but not in df under test.\n")
 
 def blank_tfmr_details():
