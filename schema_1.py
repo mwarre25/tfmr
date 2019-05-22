@@ -41,7 +41,7 @@ def blank_tfmr_details():
 def tfmr_details_report(tfmr_details_df):
     """tests a tfmr_details dataframe outputting some summary
     """
-    
+    column_check(tfmr_details_df, blank_tfmr_details())
     pass
 
 
