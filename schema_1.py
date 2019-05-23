@@ -66,7 +66,7 @@ def blank_tfmr_details():
         blank_tfmr_details[col] = blank_tfmr_details[col].astype("float")
 
     # ints
-    for col in ["NumPhases"]:
+    for col in ["NumPhases", 'IsAuto']:
         blank_tfmr_details[col] = blank_tfmr_details[col].astype("int")
 
     return blank_tfmr_details

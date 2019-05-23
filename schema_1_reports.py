@@ -59,13 +59,21 @@ def dtype_check(df_to_check, corresponding_blank_df):
     # I need to first assign the dtypes to the columns names like I do in schema_0
     # starting with tfmr_details
     test = df_to_check.dtypes == corresponding_blank_df.dtypes
+    mismatch_list = list(test[test.values == False].index)
+    # check for empty fields; if empty remove from list
+    for value in mismatch_list:
+            if not df_to_check[value].any():
+                print(str(value)+' is empty; dropping from dtype_check\n')
+                mismatch_list.remove(value)
+                test = test.drop(labels=[value])
 
     if False not in test.values:
         print('Data Type Check PASSED!\n')
     else:
         print('Data Type Check FAILED!\n------------------------\n')
         print('The following columns have a mismatch:\n')
-        print(list(test[test.values == False].index))
+        print(mismatch_list)
+
         print("\nDataframe under test's column datatypes are:\n")
         print(list(zip(df_to_check.dtypes[test[test.values == False].index].index,
                        df_to_check.dtypes[test[test.values == False].index].values)))
