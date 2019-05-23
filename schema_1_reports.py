@@ -109,3 +109,7 @@ def tfmr_details_report(tfmr_details_df):
 
     # data type checks
     dtype_check(tfmr_details_df, schema_1.blank_tfmr_details())
+
+
+    # potentials
+    # mva and hv_kv ranges

@@ -9,6 +9,7 @@ import tfmr.lists
 import numpy as np
 now = dt.datetime.now().strftime('%Y-%m-%d_%I%M%p').upper()
 
+
 def blank_tfmr_details():
     """initializes blank tfmr_details dataframe
     """
@@ -62,7 +63,7 @@ def blank_tfmr_details():
         blank_tfmr_details[col] = pd.to_datetime(blank_tfmr_details[col])
 
     # floats
-    for col in ['MVA1', 'MVA2', 'MVA3', "HV_kV", "LV1_kV","LV2_kV", "TV_kV", 'UtilityCriticality']:
+    for col in ['MVA1', 'MVA2', 'MVA3', "HV_kV", "LV1_kV", "LV2_kV", "TV_kV", 'UtilityCriticality']:
         blank_tfmr_details[col] = blank_tfmr_details[col].astype("float")
 
     # ints
@@ -70,6 +71,7 @@ def blank_tfmr_details():
         blank_tfmr_details[col] = blank_tfmr_details[col].astype("int")
 
     return blank_tfmr_details
+
 
 def blank_tfmr_service_history():
     """
@@ -85,6 +87,42 @@ def blank_tfmr_service_history():
     blank_tfmr_service_history = pd.DataFrame(
         columns=blank_tfmr_service_history_list)
 
+    # strings
+    for col in [
+            'TfmrIdentifier',
+            'TfmrEventType',
+            'PreviousStatus',
+            'ServiceStatus',
+            'FailureLoc',
+            'FailedComponent',
+            'FailureConsequence',
+            'FailureCause',
+            'RepairBy',
+            'RepairLoc',
+            'RootCause',
+            'DataFileName',
+            'CreatedBy',
+            'Remarks'
+
+    ]:
+        blank_tfmr_service_history[col] = blank_tfmr_service_history[col].astype(
+            "str")
+
+    # dates
+    for col in ['EventDate']:
+        blank_tfmr_service_history[col] = pd.to_datetime(
+            blank_tfmr_service_history[col])
+
+    # floats
+    for col in ['AgeAtFailure']:
+        blank_tfmr_service_history[col] = blank_tfmr_service_history[col].astype(
+            "float")
+
+    # ints
+    for col in ['FirstFailure']:
+        blank_tfmr_service_history[col] = blank_tfmr_service_history[col].astype(
+            "int")
+
     return blank_tfmr_service_history
 
 
@@ -99,6 +137,30 @@ def blank_tfmr_dga():
     ]
 
     blank_tfmr_dga = pd.DataFrame(columns=blank_tfmr_dga_list)
+
+    # strings
+    for col in [
+            'TfmrIdentifier',
+            'SampleFrom',
+            'DataFileName',
+            'CreatedBy',
+            'Remarks'
+
+    ]:
+        blank_tfmr_dga[col] = blank_tfmr_dga[col].astype("str")
+
+    # dates
+    for col in ['SampleDate', 'LabTestDate', ]:
+        blank_tfmr_dga[col] = pd.to_datetime(blank_tfmr_dga[col])
+
+    # floats
+    for col in ['OilTempC', 'H2', 'CH4', 'C2H6', 'C2H4', 'C2H2', 'CO', 'CO2', 'O2',
+                'N2', ]:
+        blank_tfmr_dga[col] = blank_tfmr_dga[col].astype("float")
+
+    # ints
+    for col in ['BadSample']:
+        blank_tfmr_dga[col] = blank_tfmr_dga[col].astype("int")
 
     return blank_tfmr_dga
 
@@ -116,6 +178,29 @@ def blank_tfmr_dga_online():
 
     blank_tfmr_dga_online = pd.DataFrame(columns=blank_tfmr_dga_online_list)
 
+    # strings
+    for col in [
+            'TfmrIdentifier',
+            'DataFileName',
+            'CreatedBy',
+            'Remarks',
+            'MonitorModel'
+    ]:
+        blank_tfmr_dga_online[col] = blank_tfmr_dga_online[col].astype("str")
+
+    # dates
+    for col in ['SampleDate', ]:
+        blank_tfmr_dga_online[col] = pd.to_datetime(blank_tfmr_dga_online[col])
+
+    # floats
+    for col in ['OilTempC', 'H2', 'CH4', 'C2H6', 'C2H4', 'C2H2', 'CO', 'CO2', 'O2',
+                'N2', 'Moisture_PPM', 'RelSaturation', ]:
+        blank_tfmr_dga_online[col] = blank_tfmr_dga_online[col].astype("float")
+
+    # ints
+    for col in ['BadSample']:
+        blank_tfmr_dga_online[col] = blank_tfmr_dga_online[col].astype("int")
+
     return blank_tfmr_dga_online
 
 
@@ -132,6 +217,24 @@ def blank_tfmr_oq():
 
     blank_tfmr_oq = pd.DataFrame(columns=blank_tfmr_oq_list)
 
+    # strings
+    for col in [
+            'TfmrIdentifier',
+            'DataFileName',
+            'CreatedBy',
+            'Remarks',
+    ]:
+        blank_tfmr_oq[col] = blank_tfmr_oq[col].astype("str")
+
+    # dates
+    for col in ['SampleDate', 'LabTestDate', ]:
+        blank_tfmr_oq[col] = pd.to_datetime(blank_tfmr_oq[col])
+
+    # floats
+    for col in ['OilTempC', 'MoisturePPM', 'Acidity', 'IFT', 'Color', 'D877', 'D1816_1MM',
+                'D1816_2MM', 'IEC156', 'PF_25C', 'PF_100C', ]:
+        blank_tfmr_oq[col] = blank_tfmr_oq[col].astype("float")
+
     return blank_tfmr_oq
 
 
@@ -146,6 +249,24 @@ def blank_tfmr_f():
 
     blank_tfmr_f = pd.DataFrame(columns=blank_tfmr_f_list)
 
+    # strings
+    for col in [
+            'TfmrIdentifier',
+            'DataFileName',
+            'CreatedBy',
+            'Remarks',
+    ]:
+        blank_tfmr_f[col] = blank_tfmr_f[col].astype("str")
+
+    # dates
+    for col in ['SampleDate', 'LabTestDate', ]:
+        blank_tfmr_f[col] = pd.to_datetime(blank_tfmr_f[col])
+
+    # floats
+    for col in ['2FAL', '5M2F', '5H2F',
+                '2ACF', '2FOL', 'CH3OH', ]:
+        blank_tfmr_oq[col] = blank_tfmr_oq[col].astype("float")
+
     return blank_tfmr_f
 
 
@@ -157,6 +278,14 @@ def blank_tfmr_type():
 
     blank_tfmr_type = pd.DataFrame(columns=blank_tfmr_type_list)
 
+    # strings
+    for col in [
+            'TfmrType',
+            'CreatedBy',
+            'Remarks',
+    ]:
+        blank_tfmr_type[col] = blank_tfmr_type[col].astype("str")
+
     return blank_tfmr_type
 
 
@@ -165,12 +294,19 @@ def blank_utilities():
     initializes blank_utilities dataframe
     """
     blank_utilities_list = [
-        'Fullname', 'Region', 'Headquarters', 'PointofContact1',
+        'Utility', 'Fullname', 'UtilityRegion', 'Headquarters', 'PointofContact1',
         'PhoneofContact1', 'PointofContact2', 'PhoneofContact2',
-        'DataFileName', 'LUOn', 'LUBy', 'Remarks'
+        'CreatedOn', 'LmodifiedOn', 'CreatedBy', 'Remarks'
     ]
 
     blank_utilities = pd.DataFrame(columns=blank_utilities_list)
+
+    # strings
+    for col in [
+            'Utility', 'Fullname', 'UtilityRegion', 'Headquarters', 'PointofContact1',
+            'PhoneofContact1', 'PointofContact2', 'PhoneofContact2', 'CreatedBy', 'Remarks'
+    ]:
+        blank_utilities[col] = blank_utilities[col].astype("str")
 
     return blank_utilities
 
@@ -184,6 +320,12 @@ def blank_application():
     ]
 
     blank_application = pd.DataFrame(columns=blank_application_list)
+
+    # strings
+    for col in [
+            'Application',
+    ]:
+        blank_application[col] = blank_application[col].astype("str")
 
     return blank_application
 
@@ -199,6 +341,13 @@ def blank_tfmr_manuf():
 
     blank_tfmr_manuf = pd.DataFrame(columns=blank_tfmr_manuf_list)
 
+    # strings
+    for col in [
+            'TfmrManufacturer', 'Fullname', 'Headquarters', 'FactoryLoc1',
+            'FactoryLoc2', 'CreatedBy', 'Remarks'
+    ]:
+        blank_tfmr_manuf[col] = blank_tfmr_manuf[col].astype("str")
+
     return blank_tfmr_manuf
 
 
@@ -209,11 +358,38 @@ def blank_ltc_details():
     blank_ltc_details_list = [
         'LTCIdentifier', 'LTCSerialNum', 'TfmrIdentifier', 'LTCManufacturer',
         'LTCIdentifierUnknown', 'LTCModel', 'Breather', 'Utility',
-        'OperatingCompany', 'Region', 'Substation', 'LTC_Designation',
-        'ManufactureDate', 'DataFileName', 'CreatedBy', 'Remarks'
+        'OperatingCompany', 'Region', 'Substation', 'LTCDesignation',
+        'DataFileName', 'CreatedBy', 'Remarks'
     ]
 
     blank_ltc_details = pd.DataFrame(columns=blank_ltc_details_list)
+
+    # strings
+    for col in [
+            'LTCIdentifier',
+            'LTCSerialNum',
+            'TfmrIdentifier',
+            'LTCManufacturer',
+            'LTCModel',
+            'Breather',
+            'Utility',
+            'OperatingCompany',
+            'Region',
+            'Substation',
+            'LTCDesignation',
+            'DataFileName',
+            'CreatedBy',
+            'Remarks'
+    ]:
+        blank_ltc_details[col] = blank_ltc_details[col].astype("str")
+
+    # dates
+    for col in ['ManufactureDate']:
+        blank_ltc_details[col] = pd.to_datetime(blank_ltc_details[col])
+
+    # ints
+    for col in ['LTCIdentifierUnknown']:
+        blank_ltc_details[col] = blank_ltc_details[col].astype("int")
 
     return blank_ltc_details
 
@@ -229,6 +405,12 @@ def blank_ltc_models():
 
     blank_ltc_models = pd.DataFrame(columns=blank_ltc_models_list)
 
+    # strings
+    for col in [
+            'LTCModel', 'ModelDesc', 'LTCManufacturer',
+    ]:
+        blank_ltc_models[col] = blank_ltc_models[col].astype("str")
+
     return blank_ltc_models
 
 
@@ -243,6 +425,30 @@ def blank_ltc_dga():
     ]
 
     blank_ltc_dga = pd.DataFrame(columns=blank_ltc_dga_list)
+
+    # strings
+    for col in [
+            'LTCIdentifier',
+            'Compartment',
+            'DataFileName',
+            'CreatedBy',
+            'Remarks'
+
+    ]:
+        blank_ltc_dga[col] = blank_ltc_dga[col].astype("str")
+
+    # dates
+    for col in ['SampleDate', 'LabTestDate', ]:
+        blank_ltc_dga[col] = pd.to_datetime(blank_ltc_dga[col])
+
+    # floats
+    for col in ['OilTempC', 'H2', 'CH4', 'C2H6', 'C2H4', 'C2H2', 'CO', 'CO2', 'O2',
+                'N2', ]:
+        blank_ltc_dga[col] = blank_ltc_dga[col].astype("float")
+
+    # ints
+    for col in ['BadSample']:
+        blank_ltc_dga[col] = blank_ltc_dga[col].astype("int")
 
     return blank_ltc_dga
 
@@ -260,6 +466,25 @@ def blank_ltc_oq():
 
     blank_ltc_oq = pd.DataFrame(columns=blank_ltc_oq_list)
 
+    # strings
+    for col in [
+            'LTCIdentifier',
+            'Compartment',
+            'DataFileName',
+            'CreatedBy',
+            'Remarks',
+    ]:
+        blank_ltc_oq[col] = blank_ltc_oq[col].astype("str")
+
+    # dates
+    for col in ['SampleDate', 'LabTestDate', ]:
+        blank_ltc_oq[col] = pd.to_datetime(blank_ltc_oq[col])
+
+    # floats
+    for col in ['OilTempC', 'MoisturePPM', 'Acidity', 'IFT', 'Color', 'D877', 'D1816_1MM',
+                'D1816_2MM', 'IEC156', 'PF_25C', 'PF_100C', ]:
+        blank_ltc_oq[col] = blank_ltc_oq[col].astype("float")
+
     return blank_ltc_oq
 
 
@@ -274,6 +499,20 @@ def blank_ltc_tap_pos():
 
     blank_ltc_tap_pos = pd.DataFrame(columns=blank_ltc_tap_pos_list)
 
+    # strings
+    for col in [
+            'LTCIdentifier',
+            'TapPos',
+            'DataFileName',
+            'CreatedBy',
+            'Remarks',
+    ]:
+        blank_ltc_tap_pos[col] = blank_ltc_tap_pos[col].astype("str")
+
+    # dates
+    for col in ['RecordDate', ]:
+        blank_ltc_tap_pos[col] = pd.to_datetime(blank_ltc_tap_pos[col])
+
     return blank_ltc_tap_pos
 
 
@@ -287,6 +526,26 @@ def blank_ltc_tap_count():
     ]
 
     blank_ltc_tap_count = pd.DataFrame(columns=blank_ltc_tap_count_list)
+
+    # strings
+    for col in [
+            'LTCIdentifier'
+            'DataFileName',
+            'CreatedBy',
+            'Remarks'
+
+    ]:
+        blank_ltc_tap_count[col] = blank_ltc_tap_count[col].astype("str")
+
+    # dates
+    for col in ['RecordDate', ]:
+        blank_ltc_tap_count[col] = pd.to_datetime(blank_ltc_tap_count[col])
+
+    # ints
+    for col in ['CounterReading',
+                'HighTapPos',
+                'LowTapPos', ]:
+        blank_ltc_tap_count[col] = blank_ltc_tap_count[col].astype("int")
 
     return blank_ltc_tap_count
 
@@ -318,7 +577,6 @@ def blank_ltc_manuf():
     ]
 
     blank_ltc_manuf = pd.DataFrame(columns=blank_ltc_manuf_list)
-
 
     return blank_ltc_manuf
 
@@ -352,7 +610,6 @@ def blank_bush_models():
 
     blank_bush_models = pd.DataFrame(columns=blank_bush_models_list)
 
-
     return blank_bush_models
 
 
@@ -369,7 +626,6 @@ def blank_bush_service_history():
 
     blank_bush_service_history = pd.DataFrame(
         columns=blank_bush_service_history_list)
-
 
     return blank_bush_service_history
 
