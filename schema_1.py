@@ -25,6 +25,50 @@ def blank_tfmr_details():
 
     blank_tfmr_details = pd.DataFrame(columns=blank_tfmr_details_list)
 
+    # strings
+    for col in [
+            'TfmrIdentifier',
+            'TfmrSerialNum',
+            'TfmrManufacturer',
+            'IdentifierUnknown',
+            'Utility',
+            'OperatingCompany',
+            'Region',
+            'Substation',
+            'Designation',
+            'CoreType',
+            'CoolingType1',
+            'CoolingType2',
+            'CoolingType3',
+            'Application',
+            'TfmrType',
+            'HV_Connection',
+            'LV1_Connection',
+            'LV2_Connection',
+            'TV_Connection',
+            'BuriedTertiary',
+            'IsAuto',
+            'OilType',
+            'OilPreservationType',
+            'DataFileName',
+            'CreatedBy',
+            'Remarks'
+
+    ]:
+        blank_tfmr_details[col] = blank_tfmr_details[col].astype("str")
+
+    # dates
+    for col in ['ManufactureDate']:
+        blank_tfmr_details[col] = pd.to_datetime(blank_tfmr_details[col])
+
+    # floats
+    for col in ['MVA1', 'MVA1', 'MVA1', "LV1_kV","LV2_kV", "TV_kV", 'UtilityCriticality']:
+        blank_tfmr_details[col] = blank_tfmr_details[col].astype("float")
+
+    # ints
+    for col in ["NumPhases"]:
+        blank_tfmr_details[col] = blank_tfmr_details[col].astype("int")
+
     return blank_tfmr_details
 
 def blank_tfmr_service_history():
