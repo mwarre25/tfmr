@@ -62,7 +62,7 @@ def blank_tfmr_details():
         blank_tfmr_details[col] = pd.to_datetime(blank_tfmr_details[col])
 
     # floats
-    for col in ['MVA1', 'MVA1', 'MVA1', "LV1_kV","LV2_kV", "TV_kV", 'UtilityCriticality']:
+    for col in ['MVA1', 'MVA2', 'MVA3', "HV_kV", "LV1_kV","LV2_kV", "TV_kV", 'UtilityCriticality']:
         blank_tfmr_details[col] = blank_tfmr_details[col].astype("float")
 
     # ints
