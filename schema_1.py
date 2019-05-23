@@ -37,6 +37,13 @@ def foreign_key_subset_check(df_column_to_check, foreign_key_value_list):
         print(str(left_set.difference(right_set))+'\n')
         print('These values should be checked for validity then added (as part of a whole entry) to the foreign key table.\n')
 
+def dtype_check(df_to_check, corresponding_blank_df):
+    """do all columns' data types match schema?
+    """
+
+    # I need to first assign the dtypes to the columns names like I do in schema_0
+    pass
+
 
 def blank_tfmr_details():
     """initializes blank tfmr_details dataframe
