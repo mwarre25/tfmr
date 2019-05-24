@@ -5,7 +5,7 @@ This module was developed to help formulate an ETL process for transformer data 
 
 
 # installation
-To install this package, first download the zip file or clone the repository into your site-packages folder.
+To use this package, first download the zip file or clone the repository into your site-packages folder.
 
 Ex. For a typical Anaconda installation this folder would be located at C:\Users\Mike\Anaconda3\Lib\site-packages.
 
