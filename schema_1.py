@@ -532,9 +532,7 @@ def blank_ltc_tap_count():
             'LTCIdentifier'
             'DataFileName',
             'CreatedBy',
-            'Remarks'
-
-    ]:
+            'Remarks']:
         blank_ltc_tap_count[col] = blank_ltc_tap_count[col].astype("str")
 
     # dates
@@ -564,6 +562,31 @@ def blank_ltc_service_history():
     blank_ltc_service_history = pd.DataFrame(
         columns=blank_ltc_service_history_list)
 
+    # strings
+    for col in [
+            'LTCIdentifier',
+            'LTCEventType',
+            'DataFileName',
+            'PreviousStatus',
+            'ServiceStatus',
+            'FailureLoc',
+            'FailureConsequence',
+            'FailureCause',
+            'RepairBy',
+            'RepairLoc',
+            'RootCause',
+            'DataFileName',
+            'CreatedBy',
+            'Remarks'
+    ]:
+        blank_ltc_service_history[col] = blank_ltc_service_history[col].astype(
+            "str")
+
+    # dates
+    for col in ['EventDate', ]:
+        blank_ltc_service_history[col] = pd.to_datetime(
+            blank_ltc_service_history[col])
+
     return blank_ltc_service_history
 
 
@@ -573,10 +596,19 @@ def blank_ltc_manuf():
     """
     blank_ltc_manuf_list = [
         'LTCManufacturer', 'Fullname', 'Headquarters', 'FactoryLoc1',
-        'FactoryLoc2', 'DataFileName', 'CreatedBy', 'Remarks'
+        'FactoryLoc2', 'CreatedBy', 'Remarks'
     ]
 
     blank_ltc_manuf = pd.DataFrame(columns=blank_ltc_manuf_list)
+
+    # strings
+    for col in [
+            'LTCManufacturer',
+            'Fullname',
+            'Headquarters',
+            'FactoryLoc1',
+            'FactoryLoc2', ]:
+        blank_ltc_manuf[col] = blank_ltc_manuf[col].astype("str")
 
     return blank_ltc_manuf
 
@@ -595,6 +627,40 @@ def blank_bush_details():
 
     blank_bush_details = pd.DataFrame(columns=blank_bush_details_list)
 
+    # strings
+    for col in [
+            'BushingIdentifier',
+            'BushingSerialNum',
+            'TfmrIdentifier',
+            'PhaseInstalled',
+            'BushingManufacturer',
+            'BushingModel',
+            'Utility',
+            'OperatingCompany',
+            'Region',
+            'Substation',
+            'BushingDesignation',
+            'ConnectionType',
+            'DataFileName',
+            'CreatedBy',
+            'Remarks'
+    ]:
+        blank_bush_details[col] = blank_bush_details[col].astype("str")
+
+    # dates
+    for col in ['ManufactureDate', ]:
+        blank_bush_details[col] = pd.to_datetime(blank_bush_details[col])
+
+    # floats
+    for col in ['BIL',
+                'RatedVoltage',
+                'RatedCurrent']:
+        blank_bush_details[col] = blank_bush_details[col].astype("float")
+
+    # ints
+    for col in ['BadSample']:
+        blank_bush_details[col] = blank_bush_details[col].astype("int")
+
     return blank_bush_details
 
 
@@ -603,12 +669,24 @@ def blank_bush_models():
     initializes blank_bush_models dataframe
     """
     blank_bush_models_list = [
-        'BushingModel'
-        'ModelDesc', 'BushingManufacturer', 'DataFileName', 'LUOn', 'LUBy',
+        'BushingModel',
+        'ModelDesc',
+        'BushingManufacturer',
+        'CreatedBy',
         'Remarks'
     ]
 
     blank_bush_models = pd.DataFrame(columns=blank_bush_models_list)
+
+    # strings
+    for col in [
+        'BushingModel',
+        'ModelDesc',
+        'BushingManufacturer',
+        'CreatedBy',
+        'Remarks'
+    ]:
+        blank_bush_models[col] = blank_bush_models[col].astype("str")
 
     return blank_bush_models
 
@@ -627,6 +705,30 @@ def blank_bush_service_history():
     blank_bush_service_history = pd.DataFrame(
         columns=blank_bush_service_history_list)
 
+    # strings
+    for col in [
+            'BushingIdentifier',
+            'BushingEventType',
+            'PreviousStatus',
+            'ServiceStatus',
+            'FailureLoc',
+            'FailureConsequence',
+            'FailureCause',
+            'RepairBy',
+            'RepairLoc',
+            'RootCause',
+            'DataFileName',
+            'CreatedBy',
+            'Remarks'
+    ]:
+        blank_bush_service_history[col] = blank_bush_service_history[col].astype(
+            "str")
+
+    # dates
+    for col in ['EventDate', ]:
+        blank_bush_service_history[col] = pd.to_datetime(
+            blank_bush_service_history[col])
+
     return blank_bush_service_history
 
 
@@ -642,6 +744,33 @@ def blank_bush_pf():
 
     blank_bush_pf = pd.DataFrame(columns=blank_bush_pf_list)
 
+    # strings
+    for col in [
+            'BushingIdentifier',
+            'TempHumidityInfo',
+            'DataFileName',
+            'CreatedBy',
+            'Remarks'
+    ]:
+        blank_bush_pf[col] = blank_bush_pf[col].astype("str")
+
+    # dates
+    for col in ['TestDate', ]:
+        blank_bush_pf[col] = pd.to_datetime(blank_bush_pf[col])
+
+    # floats
+    for col in ['TestVoltagekV',
+                'C1PF',
+                'C1Cap',
+                'C2PF',
+                'C2Cap', ]:
+        blank_bush_pf[col] = blank_bush_pf[col].astype("float")
+
+    # ints
+    for col in ['Factoryresult',
+                'Precommissioning', ]:
+        blank_bush_pf[col] = blank_bush_pf[col].astype("int")
+
     return blank_bush_pf
 
 
@@ -656,6 +785,18 @@ def blank_bush_manuf():
 
     blank_bush_manuf = pd.DataFrame(columns=blank_bush_manuf_list)
 
+    # strings
+    for col in [
+            'BushingManufacturer',
+            'Fullname',
+            'Headquarters',
+            'FactoryLoc1',
+            'FactoryLoc2',
+            'CreatedBy',
+            'Remarks'
+    ]:
+        blank_bush_manuf[col] = blank_bush_manuf[col].astype("str")
+
     return blank_bush_manuf
 
 
@@ -665,7 +806,8 @@ def data_file_details():
     """
     data_file_details_list = [
         'DataFile', 'FileTypeExtension', 'Utility', 'TypeofData',
-        'ReceivedDate', 'ReceivedFrom', 'FilePathStorage'
+        'ReceivedDate', 'ReceivedFrom', 'FilePathStorage',
+        'UniqueTfmrCount', 'UniqueLTCCount', 'UniqueBushingCount'
     ]
 
     data_file_details = pd.DataFrame(columns=data_file_details_list)
