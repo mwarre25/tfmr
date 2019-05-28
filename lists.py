@@ -418,7 +418,7 @@ def schema_1TfmrManufacturerList():
             "STEIN",
             "SUNBELT",
             "SWE",
-            'SWELEC",
+            "SWELEC",
             "SWX",
             "T&R",
             "TBEA",
@@ -439,6 +439,12 @@ def schema_1TfmrManufacturerList():
             "WEG",
             "XD",
             "YET",
+            'VANTRAN',
+            'USA',
+            'WARD',
+            'X',
+            'VOLTRAN', 
+            'USW',
             np.nan])
 
 
