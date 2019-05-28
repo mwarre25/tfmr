@@ -265,7 +265,7 @@ def blank_tfmr_f():
     # floats
     for col in ['2FAL', '5M2F', '5H2F',
                 '2ACF', '2FOL', 'CH3OH', ]:
-        blank_tfmr_oq[col] = blank_tfmr_oq[col].astype("float")
+        blank_tfmr_f[col] = blank_tfmr_f[col].astype("float")
 
     return blank_tfmr_f
 
@@ -382,10 +382,6 @@ def blank_ltc_details():
             'Remarks'
     ]:
         blank_ltc_details[col] = blank_ltc_details[col].astype("str")
-
-    # dates
-    for col in ['ManufactureDate']:
-        blank_ltc_details[col] = pd.to_datetime(blank_ltc_details[col])
 
     # ints
     for col in ['LTCIdentifierUnknown']:
@@ -529,7 +525,7 @@ def blank_ltc_tap_count():
 
     # strings
     for col in [
-            'LTCIdentifier'
+            'LTCIdentifier',
             'DataFileName',
             'CreatedBy',
             'Remarks']:
@@ -657,9 +653,6 @@ def blank_bush_details():
                 'RatedCurrent']:
         blank_bush_details[col] = blank_bush_details[col].astype("float")
 
-    # ints
-    for col in ['BadSample']:
-        blank_bush_details[col] = blank_bush_details[col].astype("int")
 
     return blank_bush_details
 
