@@ -358,8 +358,7 @@ def blank_ltc_details():
     blank_ltc_details_list = [
         'LTCIdentifier', 'LTCSerialNum', 'TfmrIdentifier', 'LTCManufacturer',
         'LTCIdentifierUnknown', 'LTCModel', 'Breather', 'Utility',
-        'OperatingCompany', 'Region', 'Substation', 'LTCDesignation',
-        'DataFileName', 'CreatedBy', 'Remarks'
+        'OperatingCompany', 'Region', 'Substation', 'LTCDesignation', 'ManufactureDate', 'DataFileName', 'CreatedBy', 'Remarks'
     ]
 
     blank_ltc_details = pd.DataFrame(columns=blank_ltc_details_list)
@@ -382,6 +381,11 @@ def blank_ltc_details():
             'Remarks'
     ]:
         blank_ltc_details[col] = blank_ltc_details[col].astype("str")
+
+    # dates
+    for col in ['ManufactureDate']:
+        blank_ltc_details[col] = pd.to_datetime(
+            blank_ltc_details[col])
 
     # ints
     for col in ['LTCIdentifierUnknown']:

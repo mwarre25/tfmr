@@ -55,17 +55,16 @@ def foreign_key_subset_check(df_column_to_check, foreign_key_value_list):
 def dtype_check(df_to_check, corresponding_blank_df):
     """do all columns' data types match schema?
     """
-
     # I need to first assign the dtypes to the columns names like I do in schema_0
     # starting with tfmr_details
     test = df_to_check.dtypes == corresponding_blank_df.dtypes
     mismatch_list = list(test[test.values == False].index)
     # check for empty fields; if empty remove from list
     for value in mismatch_list:
-            if not df_to_check[value].any():
-                print(str(value)+' is empty; dropping from dtype_check\n')
-                mismatch_list.remove(value)
-                test = test.drop(labels=[value])
+        if not df_to_check[value].any():
+            # print(str(value)+' is empty; dropping from dtype_check\n')
+            mismatch_list.remove(value)
+            test = test.drop(labels=[value])
 
     if False not in test.values:
         print('Data Type Check PASSED!\n')
@@ -85,8 +84,8 @@ def dtype_check(df_to_check, corresponding_blank_df):
               "each field's datatype to the schema datatype then re-run the report.")
 
 
-def tfmr_details_report(tfmr_details_df):
-    """tests a tfmr_details dataframe outputting some summary
+def tfmr_details_report(tfmr_details_df, data_file_details_df):
+    """tests a tfmr_details dataframe outputting summary reports
     """
     column_check(tfmr_details_df, schema_1.blank_tfmr_details())
 
@@ -106,10 +105,134 @@ def tfmr_details_report(tfmr_details_df):
     # TfmrType
     foreign_key_subset_check(
         tfmr_details_df['TfmrType'], tfmr.lists.tfmrTypeList())
+    
+    # DataFileName
+    foreign_key_subset_check(
+        tfmr_details_df['DataFileName'], data_file_details_df.DataFileName.unique().tolist())
 
     # data type checks
     dtype_check(tfmr_details_df, schema_1.blank_tfmr_details())
 
 
-    # potentials
-    # mva and hv_kv ranges
+def tfmr_service_history_report(tfmr_service_history_df, tfmr_details_df, data_file_details_df):
+    """tests a tfmr_service_history dataframe outputting summary reports
+    """
+    column_check(
+        tfmr_service_history_df,
+        schema_1.blank_tfmr_service_history())
+
+    # foreign key checks
+    # TfmrIdentifier
+    foreign_key_subset_check(
+        tfmr_service_history_df['TfmrIdentifier'], tfmr_details_df.TfmrIdentifier.unique().tolist())
+
+    # DataFileName
+    foreign_key_subset_check(
+        tfmr_service_history_df['DataFileName'], data_file_details_df.DataFileName.unique().tolist())
+
+    # data type checks
+    dtype_check(
+        tfmr_service_history_df,
+        schema_1.blank_tfmr_service_history())
+
+def tfmr_dga_report(tfmr_dga_df, tfmr_details_df, data_file_details_df):
+    """tests a tfmr_dga dataframe outputting summary reports
+    """
+    column_check(
+        tfmr_dga_df,
+        schema_1.blank_tfmr_dga())
+
+    # foreign key checks
+    # TfmrIdentifier
+    foreign_key_subset_check(
+        tfmr_dga_df['TfmrIdentifier'],
+        tfmr_details_df.TfmrIdentifier.unique().tolist())
+
+    # DataFileName
+    foreign_key_subset_check(
+        tfmr_dga_df['DataFileName'],
+        data_file_details_df.DataFileName.unique().tolist())
+
+    # data type checks
+    dtype_check(
+        tfmr_dga_df,
+        schema_1.blank_tfmr_dga())
+
+
+def tfmr_oq_report(tfmr_oq_df, tfmr_details_df, data_file_details_df):
+    """tests a tfmr_oq dataframe outputting summary reports
+    """
+    column_check(
+        tfmr_oq_df,
+        schema_1.blank_tfmr_oq())
+
+    # foreign key checks
+    # TfmrIdentifier
+    foreign_key_subset_check(
+        tfmr_oq_df['TfmrIdentifier'],
+        tfmr_details_df.TfmrIdentifier.unique().tolist())
+
+    # DataFileName
+    foreign_key_subset_check(
+        tfmr_oq_df['DataFileName'],
+        data_file_details_df.DataFileName.unique().tolist())
+
+    # data type checks
+    dtype_check(
+        tfmr_oq_df,
+        schema_1.blank_tfmr_oq())
+
+
+def tfmr_f_report(tfmr_f_df, tfmr_details_df, data_file_details_df):
+    """tests a tfmr_f dataframe outputting summary reports
+    """
+    column_check(
+        tfmr_f_df,
+        schema_1.blank_tfmr_f())
+
+    # foreign key checks
+    # TfmrIdentifier
+    foreign_key_subset_check(
+        tfmr_f_df['TfmrIdentifier'],
+        tfmr_details_df.TfmrIdentifier.unique().tolist())
+
+    # DataFileName
+    foreign_key_subset_check(
+        tfmr_f_df['DataFileName'],
+        data_file_details_df.DataFileName.unique().tolist())
+
+    # data type checks
+    dtype_check(
+        tfmr_f_df,
+        schema_1.blank_tfmr_f())
+
+
+def ltc_details_report(ltc_details_df, tfmr_details_df, data_file_details_df):
+    """tests a tfmr_details dataframe outputting summary reports
+    """
+    column_check(ltc_details_df, schema_1.blank_ltc_details())
+
+    # foreign key checks
+    # TfmrIdentifier
+    foreign_key_subset_check(
+        ltc_details_df['TfmrIdentifier'],
+        tfmr_details_df.TfmrIdentifier.unique().tolist())
+
+    # LTCManufacturers
+    foreign_key_subset_check(
+        ltc_details_df['LTCManufacturer'], tfmr.lists.schema_1LTCManufacturersList())
+    
+    # LTCModels
+    foreign_key_subset_check(
+        ltc_details_df['LTCModel'], tfmr.lists.schema_1LTCModelsList())
+
+    # Utilities
+    foreign_key_subset_check(
+        ltc_details_df['Utility'], tfmr.lists.schema_1UtilitiesList())
+    
+    # DataFileName
+    foreign_key_subset_check(
+        ltc_details_df['DataFileName'], data_file_details_df.DataFileName.unique().tolist())
+
+    # data type checks
+    dtype_check(ltc_details_df, schema_1.blank_ltc_details())
