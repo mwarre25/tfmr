@@ -105,7 +105,7 @@ def tfmr_details_report(tfmr_details_df, data_file_details_df):
     # TfmrType
     foreign_key_subset_check(
         tfmr_details_df['TfmrType'], tfmr.lists.tfmrTypeList())
-    
+
     # DataFileName
     foreign_key_subset_check(
         tfmr_details_df['DataFileName'], data_file_details_df.DataFileName.unique().tolist())
@@ -134,6 +134,7 @@ def tfmr_service_history_report(tfmr_service_history_df, tfmr_details_df, data_f
     dtype_check(
         tfmr_service_history_df,
         schema_1.blank_tfmr_service_history())
+
 
 def tfmr_dga_report(tfmr_dga_df, tfmr_details_df, data_file_details_df):
     """tests a tfmr_dga dataframe outputting summary reports
@@ -221,7 +222,7 @@ def ltc_details_report(ltc_details_df, tfmr_details_df, data_file_details_df):
     # LTCManufacturers
     foreign_key_subset_check(
         ltc_details_df['LTCManufacturer'], tfmr.lists.schema_1LTCManufacturersList())
-    
+
     # LTCModels
     foreign_key_subset_check(
         ltc_details_df['LTCModel'], tfmr.lists.schema_1LTCModelsList())
@@ -229,10 +230,90 @@ def ltc_details_report(ltc_details_df, tfmr_details_df, data_file_details_df):
     # Utilities
     foreign_key_subset_check(
         ltc_details_df['Utility'], tfmr.lists.schema_1UtilitiesList())
-    
+
     # DataFileName
     foreign_key_subset_check(
         ltc_details_df['DataFileName'], data_file_details_df.DataFileName.unique().tolist())
 
     # data type checks
     dtype_check(ltc_details_df, schema_1.blank_ltc_details())
+
+
+def ltc_service_history_report(ltc_service_history_df, ltc_details_df, data_file_details_df):
+    """tests a ltc_service_history dataframe outputting summary reports
+    """
+    column_check(ltc_service_history_df,
+                 schema_1.blank_ltc_service_history())
+
+    # foreign key checks
+    # LTCIdentifier
+    foreign_key_subset_check(
+        ltc_service_history_df['LTCIdentifier'],
+        ltc_details_df.LTCIdentifier.unique().tolist())
+
+    # LTCManufacturers
+    foreign_key_subset_check(
+        ltc_details_df['LTCManufacturer'], tfmr.lists.schema_1LTCManufacturersList())
+
+    # LTCModels
+    foreign_key_subset_check(
+        ltc_details_df['LTCModel'], tfmr.lists.schema_1LTCModelsList())
+
+    # Utilities
+    foreign_key_subset_check(
+        ltc_details_df['Utility'], tfmr.lists.schema_1UtilitiesList())
+
+    # DataFileName
+    foreign_key_subset_check(
+        ltc_details_df['DataFileName'], data_file_details_df.DataFileName.unique().tolist())
+
+    # data type checks
+    dtype_check(ltc_details_df, schema_1.blank_ltc_details())
+
+
+def ltc_dga_report(ltc_dga_df, ltc_details_df, data_file_details_df):
+    """tests a ltc_dga dataframe outputting summary reports
+    """
+    column_check(
+        ltc_dga_df,
+        schema_1.blank_ltc_dga())
+
+    # foreign key checks
+    # LTCIdentifier
+    foreign_key_subset_check(
+        ltc_dga_df['LTCIdentifier'],
+        ltc_details_df.LTCIdentifier.unique().tolist())
+
+    # DataFileName
+    foreign_key_subset_check(
+        ltc_dga_df['DataFileName'],
+        data_file_details_df.DataFileName.unique().tolist())
+
+    # data type checks
+    dtype_check(
+        ltc_dga_df,
+        schema_1.blank_ltc_dga())
+
+
+def ltc_oq_report(ltc_oq_df, ltc_details_df, data_file_details_df):
+    """tests a tfmr_oq dataframe outputting summary reports
+    """
+    column_check(
+        ltc_oq_df,
+        schema_1.blank_ltc_oq())
+
+    # foreign key checks
+    # LTCIdentifier
+    foreign_key_subset_check(
+        ltc_oq_df['LTCIdentifier'],
+        ltc_details_df.LTCIdentifier.unique().tolist())
+
+    # DataFileName
+    foreign_key_subset_check(
+        ltc_oq_df['DataFileName'],
+        data_file_details_df.DataFileName.unique().tolist())
+
+    # data type checks
+    dtype_check(
+        ltc_oq_df,
+        schema_1.blank_ltc_oq())
