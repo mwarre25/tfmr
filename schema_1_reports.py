@@ -32,6 +32,10 @@ def column_check(df_to_check, schema_df):
               " in schema but not in df under test.\n")
 
 
+def primary_key_duplicate_check(df_to_check, df_column_name_to_check):
+    duplicate_rows = df_to_check[df_to_check.duplicated([df_column_name_to_check])]
+    print("Duplicate Rows based on " + df_column_name_to_check + " are:", duplicate_rows, sep='\n')
+
 def foreign_key_subset_check(df_column_to_check, foreign_key_value_list):
     """are all the unique values in a foreign key column a subset of the foreign key column list?"""
     left_set = set(df_column_to_check.unique().tolist())
