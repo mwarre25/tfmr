@@ -813,7 +813,7 @@ def data_file_details():
     for col in ['UniqueTfmrCount',
                 'UniqueLTCCount',
                 'UniqueBushingCount', ]:
-        data_file_details[col] = data_file_details_[col].astype("int")
+        data_file_details[col] = data_file_details[col].astype("int")
 
     return data_file_details
 
