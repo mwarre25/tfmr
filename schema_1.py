@@ -807,6 +807,12 @@ def data_file_details():
         'UniqueTfmrCount', 'UniqueLTCCount', 'UniqueBushingCount'
     ]
 
+    # ints
+    for col in ['UniqueTfmrCount',
+                'UniqueLTCCount',
+                'UniqueBushingCount', ]:
+        blank_data_file_details_pf[col] = blank_data_file_details_pf[col].astype("int")
+
     data_file_details = pd.DataFrame(columns=data_file_details_list)
 
     return data_file_details
